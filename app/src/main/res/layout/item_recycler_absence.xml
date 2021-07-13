@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:clickable="true"
+    android:elevation="8dp"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="18dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtRecyclerAbsenceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/cairo_bold"
+            android:text="@string/name_student"
+            android:textColor="@color/colorPurple"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/edtRecyclerAbsenceNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtRecyclerAbsenceName"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bg_edite_text_boder_gray"
+            android:elevation="4dp"
+            android:fontFamily="@font/cairo_regular"
+            android:hint="@string/write_note_here"
+            android:inputType="text"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:textColor="@color/colorPurple" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtRecyclerAbsenceNote"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/imgRecyclerAbsenceFalse"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@color/colorPurpleLight"
+                android:padding="16dp"
+                android:src="@drawable/ic_false" />
+
+            <ImageView
+                android:id="@+id/imgRecyclerAbsenceTrue"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@color/colorPurple"
+                android:padding="16dp"
+                android:src="@drawable/ic_true" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

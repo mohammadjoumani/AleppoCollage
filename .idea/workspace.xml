@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config>
+        <device id="pixel_4_xl" />
+        <device id="pixel_3" />
+        <device id="pixel_3a" />
+        <device id="Nexus 6" />
+        <device id="pixel" />
+        <device id="pixel_3a_xl" />
+        <device id="pixel_xl" />
+        <device id="tv_720p" />
+        <device id="pixel_3_xl" />
+        <device id="Nexus 7" />
+      </config>
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="paid" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3d22cae6-e34f-48cf-8416-032219329f5c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[9c3bdaa]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Aleppo Collage" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Aleppo Collage" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Aleppo Collage" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Interface" />
+        <option value="valueResourceFile" />
+        <option value="resourceFile" />
+        <option value="Kotlin File" />
+        <option value="layoutResourceFile" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1saelhZMj8RCf7mdZf75z4ftMrW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="compactDirectories" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="9c3bdaa" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-07-06T10:48:22.251Z" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android-custom-viewC:/Users/MohAmmad/.gradle/caches/modules-2/files-2.1/com.github.tiper/MaterialSpinner/1.4.2/21f782096c5156c6193bb38b753b7509a7effdc1/MaterialSpinner-1.4.2-sources.jar!/com/tiper/MaterialSpinner.kt_SELECTED" value="MaterialSpinner" />
+    <property name="android-custom-viewC:/Users/MohAmmad/.gradle/caches/modules-2/files-2.1/com.wang.avi/library/2.1.3/b24ad2ac7fd480af6dc1d0302f5328b46c586200/library-2.1.3-sources.jar!/com/wang/avi/AVLoadingIndicatorView.java_SELECTED" value="AVLoadingIndicatorView" />
+    <property name="android-custom-viewC:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/java/com/example/aleppocollage/CustomSpinner.java_SELECTED" value="CustomSpinner" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
+    <property name="last_opened_file_path" value="D:/كورسات/Android Kotlin/09- CINF Kotilin Paging 3 &amp; MVVM &amp; HILT/HILT" />
+    <property name="multi-representation-previewC:/Users/MohAmmad/.gradle/caches/modules-2/files-2.1/com.github.tiper/MaterialSpinner/1.4.2/21f782096c5156c6193bb38b753b7509a7effdc1/MaterialSpinner-1.4.2-sources.jar!/com/tiper/MaterialSpinner.kt_selected" value="Custom views" />
+    <property name="multi-representation-previewC:/Users/MohAmmad/.gradle/caches/modules-2/files-2.1/com.wang.avi/library/2.1.3/b24ad2ac7fd480af6dc1d0302f5328b46c586200/library-2.1.3-sources.jar!/com/wang/avi/AVLoadingIndicatorView.java_selected" value="Custom views" />
+    <property name="multi-representation-previewC:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/java/com/example/aleppocollage/CustomSpinner.java_selected" value="Custom views" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2068528" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.example.aleppocollage.network" />
+      <recent name="com.example.aleppocollage.ui.network" />
+      <recent name="com.example.aleppocollage.model.user.domain" />
+      <recent name="com.example.aleppocollage.ui.mark" />
+      <recent name="com.example.aleppocollage.ui.test" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.example.aleppocollage.ui.loading" />
+      <recent name="com.example.aleppocollage.ui.absenceTeacher.adapter" />
+      <recent name="com.example.aleppocollage.connecter" />
+      <recent name="com.example.aleppocollage.ui.test.adapter" />
+      <recent name="com.example.aleppocollage.ui.notification.adapter" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.aleppocollage.ui" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MohAmmad\AndroidStudioProjects\AleppoCollage\app\src\main\res\drawable" />
+      <recent name="C:\Users\MohAmmad\AndroidStudioProjects\AleppoCollage\app\src\main\res\drawable-v24" />
+      <recent name="C:\Users\MohAmmad\AndroidStudioProjects\AleppoCollage\app\src\main\res\layout" />
+      <recent name="C:\Users\MohAmmad\AndroidStudioProjects\AleppoCollage\app\src\main\java\com\example\aleppocollage\model" />
+      <recent name="C:\Users\MohAmmad\AndroidStudioProjects\AleppoCollage\app\src\main\java\com\example\aleppocollage\model\mark" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.aleppocollage" />
+      <recent name="com.example.aleppocollage.util" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\MohAmmad\AndroidStudioProjects\AleppoCollage\app\src\main\java\com\example\aleppocollage\ui\test" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Android App.app">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="Aleppo_Collage.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AleppoCollage [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="AleppoCollage [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.AleppoCollage [build]" />
+        <item itemvalue="Gradle.AleppoCollage [dependencies]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3d22cae6-e34f-48cf-8416-032219329f5c" name="Default Changelist" comment="" />
+      <created>1621115280784</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621115280784</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="450" y="31" key="#Auto_Import" timestamp="1622389050553">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="450" y="31" key="#Auto_Import/0.0.1366.738@0.0.1366.738" timestamp="1622389050553" />
+    <state x="309" y="47" key="#Inspections" timestamp="1625426227343">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="309" y="47" key="#Inspections/0.0.1366.738@0.0.1366.738" timestamp="1625426227343" />
+    <state x="275" y="0" width="816" height="738" key="#Intentions" timestamp="1625427705957">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="0" width="816" height="738" key="#Intentions/0.0.1366.738@0.0.1366.738" timestamp="1625427705957" />
+    <state x="568" y="232" key="#Notifications" timestamp="1624053189632">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="568" y="232" key="#Notifications/0.0.1366.738@0.0.1366.738" timestamp="1624053189632" />
+    <state x="200" y="115" key="#PSD" timestamp="1624049981145">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="200" y="115" key="#PSD/0.0.1366.738@0.0.1366.738" timestamp="1624049981145" />
+    <state x="474" y="85" width="417" height="648" key="#com.intellij.ide.util.MemberChooser" timestamp="1626168761757">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="474" y="85" width="417" height="648" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1626168761757" />
+    <state x="232" y="293" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1621548434308">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="232" y="293" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.738@0.0.1366.738" timestamp="1621548434308" />
+    <state x="479" y="250" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1621548435987">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="479" y="250" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1366.738@0.0.1366.738" timestamp="1621548435987" />
+    <state x="237" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1625429053808">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="237" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738@0.0.1366.738" timestamp="1625429053808" />
+    <state x="455" y="147" width="540" height="443" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1626170767586">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="455" y="147" width="540" height="443" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1626170767586" />
+    <state x="92" y="92" width="1182" height="554" key="AVDManager" timestamp="1621165159937">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="92" y="92" width="1182" height="554" key="AVDManager/0.0.1366.738@0.0.1366.738" timestamp="1621165159937" />
+    <state x="263" y="124" key="AndroidCreateResourceDirectoryDialog" timestamp="1625420395068">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="263" y="124" key="AndroidCreateResourceDirectoryDialog/0.0.1366.738@0.0.1366.738" timestamp="1625420395068" />
+    <state x="263" y="124" key="AndroidCreateResourceFileDialog" timestamp="1626097253376">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="263" y="124" key="AndroidCreateResourceFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1626097253376" />
+    <state x="528" y="176" key="AndroidCreateXmlResourceDialog" timestamp="1626107457130">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="528" y="176" key="AndroidCreateXmlResourceDialog/0.0.1366.738@0.0.1366.738" timestamp="1626107457130" />
+    <state x="443" y="111" key="FileChooserDialogImpl" timestamp="1626169073336">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="443" y="111" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1626169073336" />
+    <state width="1322" height="122" key="GridCell.Tab.0.bottom" timestamp="1626123488574">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1322" height="122" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1626123488574" />
+    <state width="1322" height="122" key="GridCell.Tab.0.center" timestamp="1626123488573">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1322" height="122" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1626123488573" />
+    <state width="1322" height="122" key="GridCell.Tab.0.left" timestamp="1626123488573">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1322" height="122" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1626123488573" />
+    <state width="1322" height="122" key="GridCell.Tab.0.right" timestamp="1626123488573">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1322" height="122" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1626123488573" />
+    <state width="552" height="446" key="SwitcherDM" timestamp="1622594064519">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="552" height="446" key="SwitcherDM/0.0.1366.738@0.0.1366.738" timestamp="1622594064519" />
+    <state x="499" y="147" key="chooseDestDirectoryDialog" timestamp="1621191268482">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="499" y="147" key="chooseDestDirectoryDialog/0.0.1366.738@0.0.1366.738" timestamp="1621191268482" />
+    <state width="602" height="335" key="javadoc.popup" timestamp="1623150056306">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="602" height="335" key="javadoc.popup/0.0.1366.738@0.0.1366.738" timestamp="1623150056306" />
+    <state x="418" y="15" key="psd.add.module.dependency.panel.dimension" timestamp="1622151482049">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="418" y="15" key="psd.add.module.dependency.panel.dimension/0.0.1366.738@0.0.1366.738" timestamp="1622151482049" />
+    <state x="406" y="140" key="refactoring.ChangeSignatureDialog" timestamp="1626121385560">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="406" y="140" key="refactoring.ChangeSignatureDialog/0.0.1366.738@0.0.1366.738" timestamp="1626121385560" />
+    <state x="339" y="165" width="672" height="677" key="run.anything.popup" timestamp="1626167911497">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="339" y="165" width="672" height="677" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1626167911497" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1626122080821">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1626122080821" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Aleppo_Collage$AleppoCollage__dependencies_.ic" NAME="AleppoCollage [dependencies] Coverage Results" MODIFIED="1621779021897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

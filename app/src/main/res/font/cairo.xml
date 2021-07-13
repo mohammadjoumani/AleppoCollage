@@ -1,0 +1,20 @@
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <font
+        app:font="@font/cairo_light"
+        app:fontStyle="normal"
+        app:fontWeight="400" />
+    <font
+        app:font="@font/cairo_black"
+        app:fontStyle="normal"
+        app:fontWeight="700" />
+    <font
+        app:font="@font/cairo_semi_bold"
+        app:fontStyle="normal"
+        app:fontWeight="600" />
+
+    <font
+        app:font="@font/cairo_bold"
+        app:fontStyle="normal"
+        app:fontWeight="700" />
+</font-family>
