@@ -14,7 +14,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class MarkRepository() {
+class MarkRepository {
 
     fun getMarkStudent(studentID: Int, groupID: Int, month: Int, studyYear: String): Flow<Mark?> {
 

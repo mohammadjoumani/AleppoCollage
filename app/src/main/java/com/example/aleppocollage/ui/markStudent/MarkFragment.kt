@@ -33,9 +33,7 @@ import kotlin.collections.ArrayList
 class MarkFragment : Fragment(R.layout.fragment_mark) {
 
     private lateinit var binding: FragmentMarkBinding
-    private val markViewModel by viewModels<MarkViewModel>()
-    //private val markViewModel by viewModels<MarkViewModel>()
-    //private val markViewModel: MarkViewModel by viewModels()
+    private val markViewModel:MarkViewModel by viewModels()
     private var years: ArrayList<String>? = null
     private var cardMonth: ArrayList<CardView>? = null
     private var linearMonth: ArrayList<LinearLayout>? = null

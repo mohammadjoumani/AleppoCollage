@@ -17,11 +17,27 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="paid" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="state" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d22cae6-e34f-48cf-8416-032219329f5c" name="Default Changelist" comment="" />
+    <list default="true" id="3d22cae6-e34f-48cf-8416-032219329f5c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/repository/mark/MarkRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/repository/mark/MarkRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/markStudent/MarkFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/markStudent/MarkFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/markStudent/MarkViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/markStudent/MarkViewModel.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -325,22 +341,22 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="443" y="111" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1626169073336" />
-    <state width="1322" height="122" key="GridCell.Tab.0.bottom" timestamp="1626123488574">
+    <state width="1322" height="220" key="GridCell.Tab.0.bottom" timestamp="1626176572887">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1322" height="122" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1626123488574" />
-    <state width="1322" height="122" key="GridCell.Tab.0.center" timestamp="1626123488573">
+    <state width="1322" height="220" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1626176572887" />
+    <state width="1322" height="220" key="GridCell.Tab.0.center" timestamp="1626176572887">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1322" height="122" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1626123488573" />
-    <state width="1322" height="122" key="GridCell.Tab.0.left" timestamp="1626123488573">
+    <state width="1322" height="220" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1626176572887" />
+    <state width="1322" height="220" key="GridCell.Tab.0.left" timestamp="1626176572887">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1322" height="122" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1626123488573" />
-    <state width="1322" height="122" key="GridCell.Tab.0.right" timestamp="1626123488573">
+    <state width="1322" height="220" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1626176572887" />
+    <state width="1322" height="220" key="GridCell.Tab.0.right" timestamp="1626176572887">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1322" height="122" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1626123488573" />
+    <state width="1322" height="220" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1626176572887" />
     <state width="552" height="446" key="SwitcherDM" timestamp="1622594064519">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -361,10 +377,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="406" y="140" key="refactoring.ChangeSignatureDialog/0.0.1366.738@0.0.1366.738" timestamp="1626121385560" />
-    <state x="339" y="165" width="672" height="677" key="run.anything.popup" timestamp="1626167911497">
+    <state x="339" y="165" width="672" height="677" key="run.anything.popup" timestamp="1626176485906">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="339" y="165" width="672" height="677" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1626167911497" />
+    <state x="339" y="165" width="672" height="677" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1626176485906" />
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1626122080821">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
