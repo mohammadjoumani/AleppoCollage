@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Aleppo_Collage.iml" filepath="$PROJECT_DIR$/.idea/modules/Aleppo_Collage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Aleppo_Collage.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Aleppo_Collage.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jtds-1.2.7/Aleppo_Collage.jtds-1.2.7.iml" filepath="$PROJECT_DIR$/.idea/modules/jtds-1.2.7/Aleppo_Collage.jtds-1.2.7.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.tiper:MaterialSpinner:1.4.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a08d149c834f1f5679a0f041f4c3888a/jetified-MaterialSpinner-1.4.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a08d149c834f1f5679a0f041f4c3888a/jetified-MaterialSpinner-1.4.2/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a08d149c834f1f5679a0f041f4c3888a/jetified-MaterialSpinner-1.4.2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ec0c4528d3ecee9484ef950f23fe0071/jetified-MaterialSpinner-1.4.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ec0c4528d3ecee9484ef950f23fe0071/jetified-MaterialSpinner-1.4.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ec0c4528d3ecee9484ef950f23fe0071/jetified-MaterialSpinner-1.4.2/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.tiper/MaterialSpinner/1.4.2/68a30a0120b50d215d30ac38b13d9addccd4d570/MaterialSpinner-1.4.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.tiper/MaterialSpinner/1.4.2/21f782096c5156c6193bb38b753b7509a7effdc1/MaterialSpinner-1.4.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
