@@ -7,7 +7,6 @@
     android:clickable="true"
     android:elevation="8dp"
     android:focusable="true"
-    android:foreground="?attr/selectableItemBackground"
     app:cardCornerRadius="18dp">
 
     <RelativeLayout
@@ -26,13 +25,100 @@
             android:textColor="@color/colorPurple"
             android:textSize="18sp" />
 
+        <nl.bryanderidder.themedtogglebuttongroup.ThemedToggleButtonGroup
+            android:id="@+id/tbgRecyclerAbsenceSessions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="8dp"
+            android:layout_below="@+id/txtRecyclerAbsenceName"
+            app:justifyContent="center"
+            app:flexWrap="wrap"
+            app:toggle_selectableAmount="9">
+
+            <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                android:id="@+id/btnRecyclerAbsenceSession1"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                app:toggle_selectedTextColor="@android:color/white"
+                app:toggle_selectedBackgroundColor="@color/colorPurple"
+                app:toggle_text="1" />
+
+            <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                android:id="@+id/btnRecyclerAbsenceSession2"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                app:toggle_selectedTextColor="@android:color/white"
+                app:toggle_selectedBackgroundColor="@color/colorPurple"
+                app:toggle_text="2" />
+
+            <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                android:id="@+id/btnRecyclerAbsenceSession3"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                app:toggle_selectedTextColor="@android:color/white"
+                app:toggle_selectedBackgroundColor="@color/colorPurple"
+                app:toggle_text="3" />
+
+            <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                android:id="@+id/btnRecyclerAbsenceSession4"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                app:toggle_selectedTextColor="@android:color/white"
+                app:toggle_selectedBackgroundColor="@color/colorPurple"
+                app:toggle_text="4" />
+
+            <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                android:id="@+id/btnRecyclerAbsenceSession5"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                app:toggle_selectedTextColor="@android:color/white"
+                app:toggle_selectedBackgroundColor="@color/colorPurple"
+                app:toggle_text="5" />
+
+            <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                android:id="@+id/btnRecyclerAbsenceSession6"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                app:toggle_selectedTextColor="@android:color/white"
+                app:toggle_selectedBackgroundColor="@color/colorPurple"
+                app:toggle_text="6" />
+
+            <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                android:id="@+id/btnRecyclerAbsenceSession7"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                app:toggle_selectedTextColor="@android:color/white"
+                app:toggle_selectedBackgroundColor="@color/colorPurple"
+                app:toggle_text="7" />
+
+            <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                android:id="@+id/btnRecyclerAbsenceSession8"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                app:toggle_selectedTextColor="@android:color/white"
+                app:toggle_selectedBackgroundColor="@color/colorPurple"
+                app:toggle_text="8" />
+
+            <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                android:id="@+id/btnRecyclerAbsenceSession9"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                app:toggle_selectedTextColor="@android:color/white"
+                app:toggle_selectedBackgroundColor="@color/colorPurple"
+                app:toggle_text="9" />
+
+        </nl.bryanderidder.themedtogglebuttongroup.ThemedToggleButtonGroup>
+
         <EditText
             android:id="@+id/edtRecyclerAbsenceNote"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/txtRecyclerAbsenceName"
+            android:layout_below="@+id/tbgRecyclerAbsenceSessions"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
+            android:layout_marginBottom="8dp"
             android:background="@drawable/bg_edite_text_boder_gray"
             android:elevation="4dp"
             android:fontFamily="@font/cairo_regular"
@@ -42,32 +128,6 @@
             android:paddingEnd="18dp"
             android:textColor="@color/colorPurple" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/edtRecyclerAbsenceNote"
-            android:layout_marginTop="10dp">
-
-            <ImageView
-                android:id="@+id/imgRecyclerAbsenceFalse"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:background="@color/colorPurpleLight"
-                android:padding="16dp"
-                android:src="@drawable/ic_false" />
-
-            <ImageView
-                android:id="@+id/imgRecyclerAbsenceTrue"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:background="@color/colorPurple"
-                android:padding="16dp"
-                android:src="@drawable/ic_true" />
-        </LinearLayout>
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

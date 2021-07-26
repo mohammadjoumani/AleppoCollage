@@ -3,6 +3,7 @@ package com.example.aleppocollage.repository.mark
 import com.example.aleppocollage.connecter.ConnectDB
 import com.example.aleppocollage.model.mark.domain.Mark
 import com.example.aleppocollage.model.user.domain.Student
+import dagger.Provides
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -13,7 +14,6 @@ import java.sql.ResultSet
 import javax.inject.Inject
 import javax.inject.Singleton
 
-@Singleton
 class MarkRepository {
 
     fun getMarkStudent(studentID: Int, groupID: Int, month: Int, studyYear: String): Flow<Mark?> {

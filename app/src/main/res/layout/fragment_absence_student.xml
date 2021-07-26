@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
-    tools:context=".ui.absenceStudent.AbsenceStudentFragment">
+    tools:context=".ui.absencestudent.AbsenceStudentFragment">
 
     <RelativeLayout
         android:id="@+id/relativebsenceStudentFragmentBar"
@@ -172,6 +172,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="450dp"
                     android:layout_marginTop="8dp"
+                    tools:visibility="visible"
                     android:visibility="gone"
                     app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
 

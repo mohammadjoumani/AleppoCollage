@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
-    tools:context=".ui.markStudent.MarkFragment">
+    tools:context=".ui.markstudent.MarkFragment">
 
 
     <RelativeLayout
@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/btnWorkFragmentProfile"
+            android:id="@+id/btnMarkFragmentProfile"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_centerVertical="true"
@@ -40,7 +40,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/btnWorkFragmentBack"
+            android:id="@+id/btnMarkFragmentBack"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_alignParentEnd="true"
@@ -55,10 +55,10 @@
             app:cardCornerRadius="12dp">
 
             <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:layout_gravity="center"
-                android:background="@drawable/ic_logout" />
+                android:background="@drawable/ic_back_ward" />
 
         </androidx.cardview.widget.CardView>
 
@@ -67,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginEnd="16dp"
-            android:layout_toStartOf="@+id/btnWorkFragmentBack"
+            android:layout_toStartOf="@+id/btnMarkFragmentBack"
             android:fontFamily="@font/cairo_black"
             android:text="@string/mark"
             android:textColor="@color/colorPurple"

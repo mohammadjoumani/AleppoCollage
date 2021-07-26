@@ -4,9 +4,9 @@ data class Absence(
     var id: Int,
     var studentID: Int,
     var student: String,
-    var attendenceValue: String?,
+    var attendenceValue: String?,//nothing
     var date: String?,
-    var status: String?,
+    var status: String?,//nothing
     var note: String?,
 
     var session0: String?,

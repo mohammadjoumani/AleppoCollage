@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
     android:clipToPadding="false"
-    tools:context=".ui.workStudentOrTeacher.WorkStudentOrTeacherFragment">
+    tools:context=".ui.workstudentorteacher.WorkStudentOrTeacherFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -112,7 +112,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:background="@drawable/bg_profilee"
+                android:background="@drawable/bg_profile"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:translationY="-10dp"
@@ -122,7 +122,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/relativeWorkFragmentBar">
 
                 <TextView
-                    android:id="@+id/txtWorkStudentOrTeacherName"
+                    android:id="@+id/txtMainActivityName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/cairo_bold"
@@ -131,7 +131,7 @@
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/txtWorkStudentOrTeacherGroup"
+                    android:id="@+id/txtMainActivityGroup"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/cairo_regular"

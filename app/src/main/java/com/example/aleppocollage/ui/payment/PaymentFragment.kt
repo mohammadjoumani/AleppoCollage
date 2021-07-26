@@ -1,21 +1,21 @@
 package com.example.aleppocollage.ui.payment
 
-import android.app.Activity
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.lifecycle.Observer
 import android.widget.AdapterView
-import androidx.fragment.app.FragmentActivity
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.aleppocollage.MainActivity
 import com.example.aleppocollage.R
 import com.example.aleppocollage.databinding.FragmentPaymentBinding
 import com.example.aleppocollage.model.payment.domain.Payment
 import com.example.aleppocollage.model.user.domain.Student
 import com.example.aleppocollage.model.user.domain.Teacher
-import com.example.aleppocollage.ui.markStudent.adapter.YearSpinnerAdapter
+import com.example.aleppocollage.ui.markstudent.adapter.YearSpinnerAdapter
 import com.example.aleppocollage.ui.payment.adapter.PaymentRecyclerAdapter
 import com.example.aleppocollage.util.Status
 import io.paperdb.Paper
@@ -83,6 +83,22 @@ class PaymentFragment : Fragment(R.layout.fragment_payment) {
                 }
             }
         //endregion
+
+
+        val profileInfoStudent = Paper.book().read<Student>("Student")
+        val profileInfoTeacher = Paper.book().read<Teacher>("Teacher")
+        val typeUser = Paper.book().read<Int>("typeUser")
+        binding.btnPaymentFragmentProfile.setOnClickListener {
+            if(typeUser==1){
+                (activity as MainActivity).showProfileInfo(1,profileInfoStudent,null)
+            }else{
+                (activity as MainActivity).showProfileInfo(2,null,profileInfoTeacher)
+            }
+        }
+
+        binding.btnPaymentFragmentBack.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
     private fun getPay(id: Int, studyYear: String) {

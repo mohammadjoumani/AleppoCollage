@@ -9,6 +9,7 @@ import com.example.aleppocollage.R
 import com.example.aleppocollage.databinding.ItemRecyclerNotificationBinding
 import com.example.aleppocollage.model.notification.domain.Notification
 
+@Suppress("DEPRECATION")
 class NotificationRecyclerAdapter(
     private var notifications: List<Notification>,
     private val context: Context?

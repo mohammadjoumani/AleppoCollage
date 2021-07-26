@@ -12,6 +12,8 @@ import com.example.aleppocollage.databinding.FragmentNotificationBinding
 import com.example.aleppocollage.model.notification.domain.Notification
 import com.example.aleppocollage.ui.notification.adapter.NotificationRecyclerAdapter
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
+import com.example.aleppocollage.MainActivity
 import com.example.aleppocollage.R
 import com.example.aleppocollage.model.user.domain.Student
 import com.example.aleppocollage.model.user.domain.Teacher
@@ -53,6 +55,16 @@ class NotificationFragment : Fragment(R.layout.fragment_notification) {
         }
         //endregion
 
+        val profileInfoStudent = Paper.book().read<Student>("Student")
+        val profileInfoTeacher = Paper.book().read<Teacher>("Teacher")
+        binding.btnNotificationFragmentProfile.setOnClickListener {
+            if(typeUser==1){
+                (activity as MainActivity).showProfileInfo(1,profileInfoStudent,null)
+            }else{
+                (activity as MainActivity).showProfileInfo(2,null,profileInfoTeacher)
+            }
+        }
+
         binding.swipeRefreshNotificationFragmentStudent.setOnRefreshListener {
 
             if (typeUser == 1) {
@@ -62,6 +74,10 @@ class NotificationFragment : Fragment(R.layout.fragment_notification) {
                 val teacher = Paper.book().read<Teacher>("Teacher")
                 getNotification(1, -1, -1, teacher.id)
             }
+        }
+
+        binding.btnNotificationFragmentBack.setOnClickListener {
+            findNavController().popBackStack()
         }
     }
 
