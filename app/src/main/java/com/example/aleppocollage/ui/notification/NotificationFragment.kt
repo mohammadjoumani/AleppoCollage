@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.aleppocollage.databinding.FragmentNotificationBinding
@@ -17,6 +18,7 @@ import com.example.aleppocollage.MainActivity
 import com.example.aleppocollage.R
 import com.example.aleppocollage.model.user.domain.Student
 import com.example.aleppocollage.model.user.domain.Teacher
+import com.example.aleppocollage.ui.absenceteacher.AbsenceTeacherViewModel
 import com.example.aleppocollage.util.Status
 import io.paperdb.Paper
 
@@ -25,6 +27,8 @@ import io.paperdb.Paper
 class NotificationFragment : Fragment(R.layout.fragment_notification) {
 
     private lateinit var binding: FragmentNotificationBinding
+    private val notificationViewModel by viewModels<NotificationViewModel>()
+
 
     companion object {
         lateinit var notificationRecyclerAdapter: NotificationRecyclerAdapter
@@ -82,9 +86,8 @@ class NotificationFragment : Fragment(R.layout.fragment_notification) {
     }
 
     private fun getNotification(flag: Int, studentID: Int, groupID: Int, teacherId: Int) {
-        val notificationViewModel = NotificationViewModel()
         notificationViewModel.getNotification(flag, studentID, groupID, teacherId)
-        notificationViewModel.notifications.observe(viewLifecycleOwner, Observer { it ->
+        notificationViewModel.notifications?.observe(viewLifecycleOwner, Observer {
             when (it.status) {
                 Status.LOADING -> {
                     Log.d("state", "LOADING")

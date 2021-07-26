@@ -194,7 +194,7 @@
                                 android:layout_alignParentEnd="true"
                                 android:layout_centerVertical="true"
                                 android:fontFamily="@font/cairo_regular"
-                                android:text="@string/enter_date_today"
+                                android:text="@string/enterDateToday"
                                 android:textColor="#AAAAAA"
                                 android:textSize="16sp" />
 

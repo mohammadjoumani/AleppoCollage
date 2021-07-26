@@ -226,7 +226,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/cairo_black"
-                android:text="@string/remaining_amount"
+                android:text="@string/remainingAmount"
                 android:textColor="@color/colorWhite"
                 android:textSize="11sp" />
 
@@ -256,7 +256,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/cairo_black"
-                android:text="@string/paid_amount"
+                android:text="@string/paidAmount"
                 android:textColor="@color/colorWhite"
                 android:textSize="11sp" />
 
@@ -285,7 +285,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/cairo_black"
-                android:text="@string/total_amount"
+                android:text="@string/totalAmount"
                 android:textColor="@color/colorWhite"
                 android:textSize="11sp" />
 

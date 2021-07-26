@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.lifecycle.Observer
 import android.widget.AdapterView
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -15,6 +16,7 @@ import com.example.aleppocollage.databinding.FragmentPaymentBinding
 import com.example.aleppocollage.model.payment.domain.Payment
 import com.example.aleppocollage.model.user.domain.Student
 import com.example.aleppocollage.model.user.domain.Teacher
+import com.example.aleppocollage.ui.absenceteacher.AbsenceTeacherViewModel
 import com.example.aleppocollage.ui.markstudent.adapter.YearSpinnerAdapter
 import com.example.aleppocollage.ui.payment.adapter.PaymentRecyclerAdapter
 import com.example.aleppocollage.util.Status
@@ -28,6 +30,8 @@ class PaymentFragment : Fragment(R.layout.fragment_payment) {
 
     private lateinit var binding: FragmentPaymentBinding
     private var years: ArrayList<String>? = null
+
+    private val paymentViewModel by viewModels<PaymentViewModel>()
 
     private var paid = 0
 
@@ -102,14 +106,13 @@ class PaymentFragment : Fragment(R.layout.fragment_payment) {
     }
 
     private fun getPay(id: Int, studyYear: String) {
-        val paymentViewModel = PaymentViewModel()
         val typeUser = Paper.book().read<Int>("typeUser")
         if (typeUser == 1) {
             paymentViewModel.getPayStudent(id, studyYear)
         } else if (typeUser == 2) {
             paymentViewModel.getPayTeacher(id, studyYear)
         }
-        paymentViewModel.payStudent.observe(viewLifecycleOwner, Observer {
+        paymentViewModel.payStudent?.observe(viewLifecycleOwner, Observer {
             when (it.status) {
                 Status.LOADING -> {
                     binding.shimmerAnimationMarkFragment.visibility = View.VISIBLE
@@ -159,7 +162,6 @@ class PaymentFragment : Fragment(R.layout.fragment_payment) {
     }
 
     private fun getCost(id:Int,groupID:Int,studyYear:String){
-        val paymentViewModel = PaymentViewModel()
         val typeUser = Paper.book().read<Int>("typeUser")
         if (typeUser == 1) {
             paymentViewModel.getCostStudent(id,groupID)
@@ -167,7 +169,7 @@ class PaymentFragment : Fragment(R.layout.fragment_payment) {
             paymentViewModel.getCostTeacher(id,groupID,studyYear)
         }
         paymentViewModel.getCostStudent(id,groupID)
-        paymentViewModel.cost.observe(viewLifecycleOwner, Observer {
+        paymentViewModel.cost?.observe(viewLifecycleOwner, Observer {
             when(it.status){
                 Status.LOADING->{
 

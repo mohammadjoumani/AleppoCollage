@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,6 +20,7 @@ import com.example.aleppocollage.model.absence.domain.Absence
 import com.example.aleppocollage.model.test.domain.DeservedGroup
 import com.example.aleppocollage.model.user.domain.Student
 import com.example.aleppocollage.model.user.domain.Teacher
+import com.example.aleppocollage.ui.absencestudent.AbsenceStudentViewModel
 import com.example.aleppocollage.ui.absenceteacher.adapter.AbsenceTeacherRecyclerAdapter
 import com.example.aleppocollage.ui.chosedate.ChoseDateBottomSheet
 import com.example.aleppocollage.ui.loading.LoadingDialog
@@ -38,6 +40,7 @@ import kotlin.collections.ArrayList
 class AbsenceTeacherFragment : Fragment(R.layout.fragment_absence_teacher), AbsenceListener {
 
     private lateinit var binding: FragmentAbsenceTeacherBinding
+    private val absenceTeacherViewModel by viewModels<AbsenceTeacherViewModel>()
 
     private var years: ArrayList<String>? = null
     private var groupID: Int = 0
@@ -112,10 +115,10 @@ class AbsenceTeacherFragment : Fragment(R.layout.fragment_absence_teacher), Abse
 
         binding.btnAbsenceTeacherFragmentRecordTest.setOnClickListener {
             val date = binding.txtAbsenceTeacherFragmentChoseDate.text.toString()
-            if (date == resources.getString(R.string.enter_date_today)) {
+            if (date == resources.getString(R.string.enterDateToday)) {
                 Toasty.warning(
                     activity as MainActivity,
-                    resources.getString(R.string.please_enter_date),
+                    resources.getString(R.string.pleaseEnterDate),
                     Toast.LENGTH_SHORT,
                     true).show()
                 return@setOnClickListener
@@ -145,9 +148,8 @@ class AbsenceTeacherFragment : Fragment(R.layout.fragment_absence_teacher), Abse
     }
 
     private fun getGroupAbsenceSelect(groupID: Int, date: String) {
-        val absenceTeacherViewModel = AbsenceTeacherViewModel()
         absenceTeacherViewModel.getGroupAbsenceSelect(groupID, date)
-        absenceTeacherViewModel.absenceGroup.observe(viewLifecycleOwner, Observer {
+        absenceTeacherViewModel.absenceGroup?.observe(viewLifecycleOwner, Observer {
             when (it.status) {
                 Status.LOADING -> {
                     Log.d("state1", "LOADING")
@@ -187,7 +189,7 @@ class AbsenceTeacherFragment : Fragment(R.layout.fragment_absence_teacher), Abse
     private fun getDeservedGroup(studyYear: String, teacherID: Int) {
         val absenceTeacherViewModel = AbsenceTeacherViewModel()
         absenceTeacherViewModel.getDeservedGroup(studyYear, teacherID)
-        absenceTeacherViewModel.deservedGroup.observe(viewLifecycleOwner, Observer {
+        absenceTeacherViewModel.deservedGroup?.observe(viewLifecycleOwner, Observer {
             when (it.status) {
                 Status.LOADING -> {
                     Log.d("state", "LOADING")
@@ -208,7 +210,7 @@ class AbsenceTeacherFragment : Fragment(R.layout.fragment_absence_teacher), Abse
                         binding.spinnerAbsenceTeacherFragmentDepartment.isEnabled = false
                         Toasty.info(
                             activity as MainActivity,
-                            resources.getString(R.string.no_groups),
+                            resources.getString(R.string.noGroups),
                             Toast.LENGTH_SHORT).show()
                     }
                 }

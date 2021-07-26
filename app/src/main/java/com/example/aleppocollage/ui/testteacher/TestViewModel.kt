@@ -1,6 +1,5 @@
 package com.example.aleppocollage.ui.testteacher
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -15,31 +14,26 @@ import kotlinx.coroutines.launch
 class TestViewModel : ViewModel() {
 
     private val testRepository = TestRepository()
-    private val _deservedGroup = MutableLiveData<Resource<ArrayList<DeservedGroup>>>()
-    val deservedGroup: LiveData<Resource<ArrayList<DeservedGroup>>> = _deservedGroup
+    var deservedGroup: MutableLiveData<Resource<ArrayList<DeservedGroup>>>? = null
     private val groupList = ArrayList<DeservedGroup>()
 
 
-    fun getDeservedGroup(studyYear: String, teacherID: Int) {
-        viewModelScope.launch {
-            groupList.clear()
-            testRepository.getDeservedGroups(studyYear, teacherID)
-                .onStart {
-                    _deservedGroup.postValue(Resource.Loading(true))
+    fun getDeservedGroup(studyYear: String, teacherID: Int) = viewModelScope.launch {
+        deservedGroup = MutableLiveData()
+        groupList.clear()
+        testRepository.getDeservedGroups(studyYear, teacherID).onStart {
+                deservedGroup!!.postValue(Resource.Loading(true))
+            }.catch {
+                it.message?.let { message ->
+                    deservedGroup!!.postValue(Resource.Error(message))
                 }
-                .catch {
-                    it.message?.let { message ->
-                        _deservedGroup.postValue(Resource.Error(message))
-                    }
+            }.collect { _group ->
+                if (_group == null) {
+                    deservedGroup!!.postValue(Resource.FAILURE("name or password"))
+                } else {
+                    groupList.add(_group)
                 }
-                .collect { _group ->
-                    if (_group == null) {
-                        _deservedGroup.postValue(Resource.FAILURE("name or password"))
-                    } else {
-                        groupList.add(_group)
-                    }
-                    _deservedGroup.postValue(Resource.Success(groupList))
-                }
-        }
+                deservedGroup!!.postValue(Resource.Success(groupList))
+            }
     }
 }

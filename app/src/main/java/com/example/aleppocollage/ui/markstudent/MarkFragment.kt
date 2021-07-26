@@ -10,6 +10,7 @@ import android.view.animation.AnimationUtils
 import android.widget.*
 import androidx.lifecycle.Observer
 import androidx.cardview.widget.CardView
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -19,6 +20,7 @@ import com.example.aleppocollage.databinding.FragmentMarkBinding
 import com.example.aleppocollage.model.mark.domain.Mark
 import com.example.aleppocollage.model.user.domain.Student
 import com.example.aleppocollage.model.user.domain.Teacher
+import com.example.aleppocollage.ui.absenceteacher.AbsenceTeacherViewModel
 import com.example.aleppocollage.ui.markstudent.adapter.MarkRecyclerAdapter
 import com.example.aleppocollage.ui.markstudent.adapter.YearSpinnerAdapter
 import com.example.aleppocollage.util.Status
@@ -40,7 +42,8 @@ class MarkFragment : Fragment(R.layout.fragment_mark) {
     private var textNameMonth: ArrayList<TextView>? = null
     private var textNumberMonth: ArrayList<TextView>? = null
     private var relativeMonth: ArrayList<RelativeLayout>? = null
-    private var markViewModel:MarkViewModel?=null
+
+    private val markViewModel by viewModels<MarkViewModel>()
 
     companion object {
         lateinit var markRecyclerAdapter: MarkRecyclerAdapter
@@ -53,7 +56,7 @@ class MarkFragment : Fragment(R.layout.fragment_mark) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentMarkBinding.bind(view)
-        markViewModel= ViewModelProvider(this)[MarkViewModel::class.java]
+
         ///region recycler marks
         marks = ArrayList()
         nameTest= ArrayList()
@@ -170,8 +173,8 @@ class MarkFragment : Fragment(R.layout.fragment_mark) {
     }
 
     private fun getMarkStudent(studentID: Int, groupID: Int, month: Int, studyYear: String) {
-        markViewModel!!.getMarkStudent(studentID, groupID, month, studyYear)
-        markViewModel!!.markStudents.observe(viewLifecycleOwner, Observer {
+        markViewModel.getMarkStudent(studentID, groupID, month, studyYear)
+        markViewModel.markStudents?.observe(viewLifecycleOwner, Observer {
             when (it.status) {
                 Status.LOADING -> {
                     Log.d("state","LOADING")
