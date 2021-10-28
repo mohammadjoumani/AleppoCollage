@@ -4,6 +4,15 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ed438ed3668a487b5858515a16fd082e/jetified-taptargetview-1.11.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ed438ed3668a487b5858515a16fd082e/jetified-taptargetview-1.11.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ed438ed3668a487b5858515a16fd082e/jetified-taptargetview-1.11.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7285224e7ee0ceb967908bac0c53c87b/jetified-taptargetview-1.11.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7285224e7ee0ceb967908bac0c53c87b/jetified-taptargetview-1.11.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7285224e7ee0ceb967908bac0c53c87b/jetified-taptargetview-1.11.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ae9fa5fcf26d602172dc8ad29933662b/jetified-taptargetview-1.11.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/308c19125c7b40834c79440d3494b87d/jetified-taptargetview-1.11.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/074bd3d7aa7fb7fd3a03f8d6cd5230b7/transformed/jetified-taptargetview-1.11.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/2542737893b0c04a271e8c63e8d55836/transformed/jetified-taptargetview-1.11.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2542737893b0c04a271e8c63e8d55836/transformed/jetified-taptargetview-1.11.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2542737893b0c04a271e8c63e8d55836/transformed/jetified-taptargetview-1.11.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.getkeepsafe.taptargetview/taptargetview/1.11.0/8110db8fa94dcad0649f4a03b4143a05c039e89b/taptargetview-1.11.0-javadoc.jar!/" />

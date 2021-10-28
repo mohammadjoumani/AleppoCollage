@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ui.attendance.student.AttendanceStudentFragment">
+
+    <RelativeLayout
+        android:id="@+id/relativeSetAttendanceTeacherAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardSetAttendanceTeacherProfile"
+            android:layout_width="@dimen/dmSizeCardButtonAppBar"
+            android:layout_height="@dimen/dmSizeCardButtonAppBar"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dmMarginEnd"
+            android:layout_marginTop="@dimen/dmMarginTop"
+            android:layout_marginBottom="5dp"
+            android:clickable="true"
+            android:elevation="@dimen/dmElevationCardView"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="@dimen/dmRadiusCardViewAppBar">
+
+            <ImageView
+                android:layout_width="@dimen/dmSizeIconImageAppBar"
+                android:layout_height="@dimen/dmSizeIconImageAppBar"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_profile" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardSetAttendanceTeacherBack"
+            android:layout_width="@dimen/dmSizeCardButtonAppBar"
+            android:layout_height="@dimen/dmSizeCardButtonAppBar"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/dmMarginTop"
+            android:layout_marginStart="@dimen/dmMarginStart"
+            android:layout_marginBottom="5dp"
+            android:clickable="true"
+            android:elevation="@dimen/dmElevationButton"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="@dimen/dmRadiusCardViewAppBar">
+
+            <ImageView
+                android:layout_width="@dimen/dmSizeIconBackAppBar"
+                android:layout_height="@dimen/dmSizeIconBackAppBar"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_back_ward" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dmMarginStart"
+            android:layout_toEndOf="@+id/cardSetAttendanceTeacherBack"
+            android:fontFamily="@font/cairo_black"
+            android:text="@string/strAbsence"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/dmTextSizeTitleTextView" />
+
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshSetAttendanceTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSetAttendanceTeacherSave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeSetAttendanceTeacherAppBar">
+
+        <RelativeLayout
+            android:id="@+id/relativeTeacher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerAttendanceTeacher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/dmHalfMarginStart"
+                android:paddingEnd="@dimen/dmHalfMarginEnd"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_recycler_attendance" />
+
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <Button
+        android:id="@+id/btnSetAttendanceTeacherSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/cairo_bold"
+        android:foreground="?attr/selectableItemBackground"
+        android:text="@string/strSave"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/dmTextSizeButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

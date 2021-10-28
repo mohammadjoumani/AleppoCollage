@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:clipToPadding="false"
+    tools:context=".ui.home.student.HomeStudentFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgHomeStudentBackGround"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_student_pana"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RelativeLayout
+                android:id="@+id/relativeHomeStudentAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardHomeStudentProfile"
+                    android:layout_width="@dimen/dmSizeCardButtonAppBar"
+                    android:layout_height="@dimen/dmSizeCardButtonAppBar"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/dmMarginTop"
+                    android:layout_marginEnd="@dimen/dmMarginEnd"
+                    android:layout_marginBottom="5dp"
+                    android:clickable="true"
+                    android:elevation="@dimen/dmElevationButton"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="@dimen/dmRadiusCardViewAppBar">
+
+                    <ImageView
+                        android:layout_width="@dimen/dmSizeIconImageAppBar"
+                        android:layout_height="@dimen/dmSizeIconImageAppBar"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_profile" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardHomeStudentNotification"
+                    android:layout_width="@dimen/dmSizeCardButtonAppBar"
+                    android:layout_height="@dimen/dmSizeCardButtonAppBar"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/dmMarginTop"
+                    android:layout_marginEnd="@dimen/dmMarginEnd"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toStartOf="@+id/cardHomeStudentProfile"
+                    android:clickable="true"
+                    android:elevation="@dimen/dmElevationButton"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="@dimen/dmRadiusCardViewAppBar">
+
+                    <ImageView
+                        android:layout_width="@dimen/dmSizeIconImageAppBar"
+                        android:layout_height="@dimen/dmSizeIconImageAppBar"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_notification" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardHomeStudentLogout"
+                    android:layout_width="@dimen/dmSizeCardButtonAppBar"
+                    android:layout_height="@dimen/dmSizeCardButtonAppBar"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dmMarginStart"
+                    android:layout_marginTop="@dimen/dmMarginTop"
+                    android:layout_marginBottom="5dp"
+                    android:clickable="true"
+                    android:elevation="@dimen/dmElevationButton"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="@dimen/dmRadiusCardViewAppBar">
+
+                    <ImageView
+                        android:layout_width="@dimen/dmSizeIconImageAppBar"
+                        android:layout_height="@dimen/dmSizeIconImageAppBar"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_logout" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dmMarginStart"
+                    android:layout_toEndOf="@+id/cardHomeStudentLogout"
+                    android:fontFamily="@font/cairo_black"
+                    android:text="@string/strHome"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/dmTextSizeTitleTextView" />
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#17000000"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeHomeStudentPayment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_button_home">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_credit_card" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeHomeStudentMarks"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_button_home">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_mark" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeHomeStudentAttendance"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_button_home">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_calendar" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:clickable="true"
+    android:elevation="8dp"
+    android:focusable="true"
+    app:cardCornerRadius="18dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtRecyclerAttendanceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/cairo_bold"
+            android:text="@string/strNameStudent"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/linearSessions1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtRecyclerAttendanceName"
+            android:layout_marginStart="@dimen/dmMarginStart"
+            android:layout_marginEnd="@dimen/dmMarginEnd"
+            android:gravity="center_horizontal"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/txtRecyclerAttendanceTeacherSession1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_gray"
+                android:fontFamily="@font/cairo_regular"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:id="@+id/txtRecyclerAttendanceTeacherSession2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_gray"
+                android:fontFamily="@font/cairo_regular"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:id="@+id/txtRecyclerAttendanceTeacherSession3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_gray"
+                android:fontFamily="@font/cairo_regular"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:id="@+id/txtRecyclerAttendanceTeacherSession4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_gray"
+                android:fontFamily="@font/cairo_regular"
+                android:gravity="center"
+                android:text="4"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:id="@+id/txtRecyclerAttendanceTeacherSession5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_gray"
+                android:fontFamily="@font/cairo_regular"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="@color/colorBlack" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearSessions2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearSessions1"
+            android:layout_marginStart="@dimen/dmMarginStart"
+            android:layout_marginEnd="@dimen/dmMarginEnd"
+            android:gravity="center_horizontal"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/txtRecyclerAttendanceTeacherSession6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_gray"
+                android:fontFamily="@font/cairo_regular"
+                android:gravity="center"
+                android:text="6"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:id="@+id/txtRecyclerAttendanceTeacherSession7"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_gray"
+                android:fontFamily="@font/cairo_regular"
+                android:gravity="center"
+                android:text="7"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:id="@+id/txtRecyclerAttendanceTeacherSession8"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_gray"
+                android:fontFamily="@font/cairo_regular"
+                android:gravity="center"
+                android:text="8"
+                android:textColor="@color/colorBlack" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edtRecyclerAttendanceNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearSessions2"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_edit_text_border_gray"
+            android:elevation="4dp"
+            android:fontFamily="@font/cairo_regular"
+            android:hint="@string/strWriteNoteHere"
+            android:inputType="text"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:textColor="@color/colorPrimary" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

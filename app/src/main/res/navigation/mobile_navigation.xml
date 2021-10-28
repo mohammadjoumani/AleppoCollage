@@ -1,1 +1,283 @@
-<?xml version="1.0" encoding="utf-8"?><navigation xmlns:android="http://schemas.android.com/apk/res/android"    xmlns:app="http://schemas.android.com/apk/res-auto"    xmlns:tools="http://schemas.android.com/tools"    android:id="@+id/mobile_navigation"    app:startDestination="@id/RegisterFragment">    <fragment        android:id="@+id/RegisterFragment"        android:name="com.example.aleppocollage.ui.register.RegisterFragment"        tools:layout="@layout/fragment_regsiter">        <action            android:id="@+id/action_navigationRegister_to_navigationRegisterStudent"            app:destination="@id/RegisterStudentFragment"            app:enterAnim="@anim/slide_in_right"            app:exitAnim="@anim/slide_out_left"            app:popEnterAnim="@anim/slide_in_left"            app:popExitAnim="@anim/slide_out_right" />        <action            android:id="@+id/actionRegisterFragmentToRegisterTeacherFragment"            app:destination="@id/RegisterTeacherFragment"            app:enterAnim="@anim/slide_in_right"            app:exitAnim="@anim/slide_out_left"            app:popEnterAnim="@anim/slide_in_left"            app:popExitAnim="@anim/slide_out_right" />    </fragment>    <fragment        android:id="@+id/RegisterTeacherFragment"        android:name="com.example.aleppocollage.ui.registerteacher.RegisterTeacherFragment"        tools:layout="@layout/fragment_register_teacher">        <action            android:id="@+id/actionRegisterTeacherFragmentToWorkStudentOrTeacherFragment"            app:destination="@id/workStudentOrTeacherFragment"            app:enterAnim="@anim/slide_in_right"            app:exitAnim="@anim/slide_out_left"            app:popEnterAnim="@anim/slide_in_left"            app:popExitAnim="@anim/slide_out_right" />    </fragment>    <fragment        android:id="@+id/RegisterStudentFragment"        android:name="com.example.aleppocollage.ui.registerstudent.RegisterStudentFragment"        tools:layout="@layout/fragment_register_student">        <action            android:id="@+id/actionNavigationRegisterStudentToWorkStudentOrTeacherFragment"            app:destination="@id/workStudentOrTeacherFragment"            app:enterAnim="@anim/slide_in_right"            app:exitAnim="@anim/slide_out_left"            app:popEnterAnim="@anim/slide_in_left"            app:popExitAnim="@anim/slide_out_right" />    </fragment>    <fragment        android:id="@+id/workStudentOrTeacherFragment"        android:name="com.example.aleppocollage.ui.workstudentorteacher.WorkStudentOrTeacherFragment"        android:label="fragment_work_student_or_teacher"        tools:layout="@layout/fragment_work_student_or_teacher">        <action            android:id="@+id/actionWorkStudentOrTeacherFragmentToNotificationFragment"            app:destination="@id/notificationFragment"            app:enterAnim="@anim/slide_in_top"            app:exitAnim="@anim/slide_out_bottom"            app:popEnterAnim="@anim/slide_in_bottom"            app:popExitAnim="@anim/slide_out_top" />        <action            android:id="@+id/actionWorkStudentOrTeacherFragmentToPaymentFragment"            app:destination="@id/paymentFragment"            app:enterAnim="@anim/slide_in_right"            app:exitAnim="@anim/slide_out_left"            app:popEnterAnim="@anim/slide_out_right"            app:popExitAnim="@anim/slide_out_right" />        <action            android:id="@+id/actionWorkStudentOrTeacherFragmentToTestFragment"            app:destination="@id/testFragment"            app:enterAnim="@anim/slide_in_right"            app:exitAnim="@anim/slide_out_left"            app:popEnterAnim="@anim/slide_in_left"            app:popExitAnim="@anim/slide_out_right" />        <action            android:id="@+id/actionWorkStudentOrTeacherFragmentToMarkFragment"            app:destination="@id/markFragment"            app:enterAnim="@anim/slide_in_right"            app:exitAnim="@anim/slide_out_left"            app:popEnterAnim="@anim/slide_out_right"            app:popExitAnim="@anim/slide_out_right" />        <action            android:id="@+id/actionWorkStudentOrTeacherFragmenToAbsenceTeacherFragment"            app:destination="@id/absenceTeacherFragment"            app:enterAnim="@anim/slide_in_right"            app:exitAnim="@anim/slide_out_left"            app:popEnterAnim="@anim/slide_in_left"            app:popExitAnim="@anim/slide_out_right" />        <action            android:id="@+id/actionWorkStudentOrTeacherFragmentToAbsenceStudentFragment"            app:destination="@id/absenceStudentFragment"            app:enterAnim="@anim/slide_in_right"            app:exitAnim="@anim/slide_out_left"            app:popEnterAnim="@anim/slide_in_left"            app:popExitAnim="@anim/slide_out_right" />        <action            android:id="@+id/actionWorkStudentOrTeacherFragmentToRegisterFragment"            app:destination="@id/RegisterFragment"            app:enterAnim="@anim/slide_in_left"            app:exitAnim="@anim/slide_out_right"            app:popEnterAnim="@anim/slide_in_right"            app:popExitAnim="@anim/slide_out_left"            app:popUpTo="@id/RegisterFragment" />    </fragment>    <fragment        android:id="@+id/absenceStudentFragment"        android:name="com.example.aleppocollage.ui.absencestudent.AbsenceStudentFragment"        android:label="fragment_absence_student"        tools:layout="@layout/fragment_absence_student" />    <fragment        android:id="@+id/absenceTeacherFragment"        android:name="com.example.aleppocollage.ui.absenceteacher.AbsenceTeacherFragment"        android:label="fragment_absence_teacher"        tools:layout="@layout/fragment_absence_teacher" />    <fragment        android:id="@+id/notificationFragment"        android:name="com.example.aleppocollage.ui.notification.NotificationFragment"        android:label="fragment_notification"        tools:layout="@layout/fragment_notification" />    <fragment        android:id="@+id/paymentFragment"        android:name="com.example.aleppocollage.ui.payment.PaymentFragment"        android:label="fragment_payment"        tools:layout="@layout/fragment_payment" />    <fragment        android:id="@+id/testFragment"        android:name="com.example.aleppocollage.ui.testteacher.TestFragment"        android:label="fragment_test"        tools:layout="@layout/fragment_test" />    <fragment        android:id="@+id/markFragment"        android:name="com.example.aleppocollage.ui.markstudent.MarkFragment"        android:label="fragment_mark"        tools:layout="@layout/fragment_mark" /></navigation>
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/RegisterFragment">
+
+    <fragment
+        android:id="@+id/RegisterFragment"
+        android:name="com.example.aleppocollage.ui.auth.register.RegisterFragment"
+        tools:layout="@layout/fragment_regsiter">
+        <action
+            android:id="@+id/action_navigationRegister_to_navigationRegisterStudent"
+            app:destination="@id/RegisterStudentFragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+
+        <action
+            android:id="@+id/actionRegisterFragmentToRegisterTeacherFragment"
+            app:destination="@id/RegisterTeacherFragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/RegisterTeacherFragment"
+        android:name="com.example.aleppocollage.ui.auth.login.teacher.RegisterTeacherFragment"
+        tools:layout="@layout/fragment_register_teacher">
+        <action
+            android:id="@+id/actionRegisterTeacherFragmentToWorkStudentOrTeacherFragment"
+            app:destination="@id/HomeTeacherFragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/RegisterStudentFragment"
+        android:name="com.example.aleppocollage.ui.auth.login.student.RegisterStudentFragment"
+        tools:layout="@layout/fragment_register_student">
+        <action
+            android:id="@+id/action_RegisterStudentFragment_to_homeStudentFragment"
+            app:destination="@id/homeStudentFragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/HomeTeacherFragment"
+        android:name="com.example.aleppocollage.ui.home.teacher.HomeTeacherFragment"
+        android:label="fragment_home_teacher"
+        tools:layout="@layout/fragment_home_teacher">
+
+        <action
+            android:id="@+id/actionHomeTeacherFragmentToNotificationFragment"
+            app:destination="@id/notificationFragment"
+            app:enterAnim="@anim/anim_slide_in_top"
+            app:exitAnim="@anim/anim_slide_out_bottom"
+            app:popEnterAnim="@anim/anim_slide_in_bottom"
+            app:popExitAnim="@anim/anim_slide_out_top" />
+
+        <action
+            android:id="@+id/actionHomeTeacherFragmentToPaymentFragment"
+            app:destination="@id/paymentFragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_out_right"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+
+        <action
+            android:id="@+id/actionHomeTeacherFragmentToTestFragment"
+            app:destination="@id/examFragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+
+        <action
+            android:id="@+id/actionHomeTeacherFragmentToAbsenceTeacherFragment"
+            app:destination="@id/absenceTeacherFragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+        <action
+            android:id="@+id/action_HomeTeacherFragment_to_RegisterFragment"
+            app:destination="@id/RegisterFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/absenceStudentFragment"
+        android:name="com.example.aleppocollage.ui.attendance.student.AttendanceStudentFragment"
+        android:label="fragment_absence_student"
+        tools:layout="@layout/fragment_attendance_student" />
+
+    <fragment
+        android:id="@+id/absenceTeacherFragment"
+        android:name="com.example.aleppocollage.ui.attendance.teacher.check.AttendanceTeacherFragment"
+        android:label="fragment_absence_teacher"
+        tools:layout="@layout/fragment_attendance_teacher" >
+        <action
+            android:id="@+id/action_absenceTeacherFragment_to_setAttendanceTeacherFragment"
+            app:destination="@id/setAttendanceTeacherFragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.aleppocollage.ui.notification.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.example.aleppocollage.ui.payment.teacher.PaymentTeacherFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment_teacher" />
+
+    <fragment
+        android:id="@+id/examFragment"
+        android:name="com.example.aleppocollage.ui.exam.teacher.get.ExamFragment"
+        android:label="fragment_exam"
+        tools:layout="@layout/fragment_exam" >
+        <action
+            android:id="@+id/action_examFragment_to_examCheckedFragment"
+            app:destination="@id/examCheckedFragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+        <action
+            android:id="@+id/action_examFragment_to_examDeliveredFragment"
+            app:destination="@id/examDeliveredFragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+        <action
+            android:id="@+id/action_examFragment_to_examNewFragment"
+            app:destination="@id/examNewFragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/markFragment"
+        android:name="com.example.aleppocollage.ui.mark.student.MarkFragment"
+        android:label="fragment_mark"
+        tools:layout="@layout/fragment_mark" />
+
+    <dialog
+        android:id="@+id/loadingDialog"
+        android:name="com.example.aleppocollage.ui.util.loading.LoadingDialogFragment"
+        android:label="LoadingDialog" />
+    <action
+        android:id="@+id/action_global_loadingDialog"
+        app:destination="@id/loadingDialog" />
+
+    <dialog
+        android:id="@+id/connectionStateDialog"
+        android:name="com.example.aleppocollage.ui.util.network.ConnectionStateDialog"
+        android:label="ConnectionStateDialog" />
+    <action
+        android:id="@+id/action_global_connectionStateDialog"
+        app:destination="@id/connectionStateDialog" />
+
+    <fragment
+        android:id="@+id/homeStudentFragment"
+        android:name="com.example.aleppocollage.ui.home.student.HomeStudentFragment"
+        android:label="fragment_home_student"
+        tools:layout="@layout/fragment_home_student">
+        <action
+            android:id="@+id/action_homeStudentFragment_to_markFragment"
+            app:destination="@id/markFragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+        <action
+            android:id="@+id/action_homeStudentFragment_to_absenceStudentFragment"
+            app:destination="@id/absenceStudentFragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+        <action
+            android:id="@+id/action_homeStudentFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment"
+            app:enterAnim="@anim/anim_slide_in_top"
+            app:exitAnim="@anim/anim_slide_out_bottom"
+            app:popEnterAnim="@anim/anim_slide_in_bottom"
+            app:popExitAnim="@anim/anim_slide_out_top" />
+        <action
+            android:id="@+id/action_homeStudentFragment_to_paymentStudentFragment"
+            app:destination="@id/paymentStudentFragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+        <action
+            android:id="@+id/action_homeStudentFragment_to_RegisterFragment"
+            app:destination="@id/RegisterFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/chooseDateSheetFragment"
+        android:name="com.example.aleppocollage.ui.util.choosedate.ChooseDateSheetFragment"
+        android:label="ChooseDateSheetFragment" />
+    <action
+        android:id="@+id/action_global_chooseDateSheetFragment"
+        app:destination="@id/chooseDateSheetFragment" />
+
+    <fragment
+        android:id="@+id/paymentStudentFragment"
+        android:name="com.example.aleppocollage.ui.payment.student.PaymentStudentFragment"
+        android:label="fragment_payment_student"
+        tools:layout="@layout/fragment_payment_student" />
+
+    <fragment
+        android:id="@+id/setAttendanceTeacherFragment"
+        android:name="com.example.aleppocollage.ui.attendance.teacher.set.SetAttendanceTeacherFragment"
+        android:label="SetAttendanceTeacherFragment" >
+
+        <argument
+            android:name="groupId"
+            app:argType="integer" />
+        <argument
+            android:name="date"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/examCheckedFragment"
+        android:name="com.example.aleppocollage.ui.exam.teacher.checked.ExamCheckedFragment"
+        android:label="ExamCheckedFragment"
+        app:enterAnim="@anim/anim_slide_in_right"
+        app:exitAnim="@anim/anim_slide_out_left"
+        app:popEnterAnim="@anim/anim_slide_in_left"
+        app:popExitAnim="@anim/anim_slide_out_right" >
+        <argument
+            android:name="groupId"
+            app:argType="integer" />
+        <argument
+            android:name="exam"
+            app:argType="com.example.aleppocollage.model.exam.domain.Exam" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/examDeliveredFragment"
+        android:name="com.example.aleppocollage.ui.exam.teacher.delivered.ExamDeliveredFragment"
+        android:label="ExamDeliveredFragment"
+        app:enterAnim="@anim/anim_slide_in_right"
+        app:exitAnim="@anim/anim_slide_out_left"
+        app:popEnterAnim="@anim/anim_slide_in_left"
+        app:popExitAnim="@anim/anim_slide_out_right" >
+        <argument
+            android:name="exam"
+            app:argType="com.example.aleppocollage.model.exam.domain.Exam" />
+        <argument
+            android:name="groupId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/examNewFragment"
+        android:name="com.example.aleppocollage.ui.exam.teacher.examnew.ExamNewFragment"
+        android:label="fragment_exam_new"
+        tools:layout="@layout/fragment_exam_new" />
+
+</navigation>

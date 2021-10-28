@@ -1,26 +1,19 @@
 package com.example.aleppocollage.ui.payment.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.aleppocollage.R
 import com.example.aleppocollage.databinding.ItemRecyclerPaymentBinding
-import com.example.aleppocollage.model.mark.domain.Mark
 import com.example.aleppocollage.model.payment.domain.Payment
 
 class PaymentRecyclerAdapter(
     private var payments: List<Payment>,
-    private val context: Context?
 ) : RecyclerView.Adapter<PaymentRecyclerAdapter.PaymentViewHolder>() {
 
-    inner class PaymentViewHolder(val binding: ItemRecyclerPaymentBinding) :
-        RecyclerView.ViewHolder(binding.root)
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PaymentViewHolder {
-        val view = LayoutInflater.from(parent.context)
-        return PaymentViewHolder(ItemRecyclerPaymentBinding.inflate(view, parent, false))
+        val binding =
+            ItemRecyclerPaymentBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return PaymentViewHolder(binding)
     }
 
     override fun getItemCount(): Int {
@@ -28,12 +21,24 @@ class PaymentRecyclerAdapter(
     }
 
     override fun onBindViewHolder(holder: PaymentViewHolder, position: Int) {
-        holder.binding.txtRecyclerPaymentNumber.text = payments[holder.adapterPosition].payNo.toString()
-        holder.binding.txtRecyclerPaymentDate.text = payments[holder.adapterPosition].date
-        holder.binding.txtRecyclerPaymentPay.text = payments[holder.adapterPosition].pay.toString()
-        holder.binding.txtRecyclerPaymentDateMonth.text = payments[holder.adapterPosition].dateForMonth
 
+       val payment = payments[holder.layoutPosition]
+        holder.bind(payment)
     }
+
+     class PaymentViewHolder(
+         val binding: ItemRecyclerPaymentBinding
+         ) : RecyclerView.ViewHolder(binding.root) {
+
+            fun bind(itemEntity: Payment) {
+                binding.apply {
+                    txtRecyclerPaymentNumber.text = itemEntity.payNo.toString()
+                    txtRecyclerPaymentDate.text = itemEntity.date
+                    txtRecyclerPaymentPay.text = itemEntity.pay.toString()
+                    txtRecyclerPaymentMonth.text = itemEntity.dateForMonth
+                }
+            }
+        }
 
     fun setData(payments: List<Payment>) {
         this.payments = payments

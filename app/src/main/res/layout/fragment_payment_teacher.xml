@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ui.payment.teacher.PaymentTeacherFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgPaymentNoData"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="250dp"
+            android:src="@drawable/ic_no_data"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txtPaymentNoData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgPaymentNoData"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/cairo_regular"
+            android:text="لا توجد دفعات"
+            android:textColor="@color/colorPrimary"
+            android:textSize="22sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativePaymentTeacherAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardPaymentTeacherProfile"
+            android:layout_width="@dimen/dmSizeCardButtonAppBar"
+            android:layout_height="@dimen/dmSizeCardButtonAppBar"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/dmMarginTop"
+            android:layout_marginEnd="@dimen/dmMarginEnd"
+            android:layout_marginBottom="5dp"
+            android:clickable="true"
+            android:elevation="@dimen/dmElevationButton"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="@dimen/dmRadiusCardViewAppBar">
+
+            <ImageView
+                android:layout_width="@dimen/dmSizeIconImageAppBar"
+                android:layout_height="@dimen/dmSizeIconImageAppBar"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_profile" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardPaymentTeacherBack"
+            android:layout_width="@dimen/dmSizeCardButtonAppBar"
+            android:layout_height="@dimen/dmSizeCardButtonAppBar"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dmMarginStart"
+            android:layout_marginTop="@dimen/dmMarginTop"
+            android:layout_marginBottom="5dp"
+            android:clickable="true"
+            android:elevation="@dimen/dmElevationButton"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="@dimen/dmRadiusCardViewAppBar">
+
+            <ImageView
+                android:layout_width="@dimen/dmSizeIconBackAppBar"
+                android:layout_height="@dimen/dmSizeIconBackAppBar"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_back_ward" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dmMarginStart"
+            android:layout_toEndOf="@+id/cardPaymentTeacherBack"
+            android:fontFamily="@font/cairo_black"
+            android:text="@string/strPayment"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/dmTextSizeTitleTextView" />
+    </RelativeLayout>
+
+    <Spinner
+        android:id="@+id/spinnerPaymentTeacherYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dmMarginStart"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="@dimen/dmMarginEnd"
+        android:background="@drawable/bg_spinner_down"
+        android:dropDownVerticalOffset="50dp"
+        android:elevation="@dimen/dmElevationSpinner"
+        android:fontFamily="@font/cairo_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativePaymentTeacherAppBar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/linearPaymentTeacherSummary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerPaymentTeacherYear">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerPaymentTeacherYear">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerPaymentTeacher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_recycler_payment" />
+
+            <!--        Shimmer for payment-->
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerAnimationPaymentTeacher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                tools:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/item_shimmer_payment" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/item_shimmer_payment" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/item_shimmer_payment" />
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearPaymentTeacherSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_payment"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/txtPaymentRemainingAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/cairo_black"
+                android:text="00000"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_black"
+                android:text="@string/strRemainingAmount"
+                android:textColor="@color/colorWhite"
+                android:textSize="11sp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/txtPaymentPaidAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/cairo_black"
+                android:text="00000"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_black"
+                android:text="@string/strPaidAmount"
+                android:textColor="@color/colorWhite"
+                android:textSize="11sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/txtPaymentTotalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/cairo_black"
+                android:text="00000"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_black"
+                android:text="@string/strTotalAmount"
+                android:textColor="@color/colorWhite"
+                android:textSize="11sp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
