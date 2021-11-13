@@ -1,7 +1,9 @@
 package com.example.aleppocollage.ui.attendance.student
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
@@ -30,7 +32,7 @@ class AttendanceStudentFragment : Fragment(R.layout.fragment_attendance_student)
 
     private val sessions: ArrayList<String> = ArrayList()
 
-    private val relativeSessions: ArrayList<RelativeLayout> = ArrayList()
+    private val imagesSessions: ArrayList<ImageView> = ArrayList()
     private val textSessions: ArrayList<TextView> = ArrayList()
 
     //endregion
@@ -90,6 +92,8 @@ class AttendanceStudentFragment : Fragment(R.layout.fragment_attendance_student)
                 txtAttendanceStudentChooseDate.setTextColor(getColor(requireContext(), R.color.colorGray))
             }
 
+            swipeRefreshAttendanceStudentStudentStudent.setColorSchemeColors(getColor(requireContext(), R.color.colorPrimary))
+
             swipeRefreshAttendanceStudentStudentStudent.setOnRefreshListener {
                 date = ""
                 imgAttendanceStudentClearDate.isVisible = false
@@ -131,6 +135,7 @@ class AttendanceStudentFragment : Fragment(R.layout.fragment_attendance_student)
             when(it) {
                 is DataState.Loading -> {
 
+                    Log.d("DataState","Loading")
                     binding.apply {
                         swipeRefreshAttendanceStudentStudentStudent.isRefreshing = true
                         constraintAttendanceStudentSession.isVisible = false
@@ -151,8 +156,7 @@ class AttendanceStudentFragment : Fragment(R.layout.fragment_attendance_student)
                         it.data.session5 == null ||
                         it.data.session5 == null ||
                         it.data.session6 == null ||
-                        it.data.session7 == null ||
-                        it.data.session8 == null
+                        it.data.session7 == null
                     ) {
 
                         Toasty.error(requireContext(), "لا يوجد بيانات لهذا التاريخ", Toast.LENGTH_SHORT, true).show()
@@ -167,6 +171,7 @@ class AttendanceStudentFragment : Fragment(R.layout.fragment_attendance_student)
                         }
 
                     } else {
+                        Log.d("DataState","Success")
 
                         sessions.add(it.data.session0!!)
                         sessions.add(it.data.session1!!)
@@ -177,8 +182,8 @@ class AttendanceStudentFragment : Fragment(R.layout.fragment_attendance_student)
                         sessions.add(it.data.session5!!)
                         sessions.add(it.data.session6!!)
                         sessions.add(it.data.session7!!)
-                        sessions.add(it.data.session8!!)
-                        sessions.add(it.data.session9!!)
+//                        sessions.add(it.data.session8!!)
+//                        sessions.add(it.data.session9!!)
 
                         binding.apply {
                             swipeRefreshAttendanceStudentStudentStudent.isRefreshing = false
@@ -189,7 +194,7 @@ class AttendanceStudentFragment : Fragment(R.layout.fragment_attendance_student)
                             cardAttendanceStudentNoteContent.isVisible = true
                         }
 
-                        if (it.data.note == "" || it.data.note == null){
+                        if (it.data.note == "" || it.data.note == null) {
 
                             binding.apply {
                                 txtAttendanceStudentNotes.text = getString(R.string.strNote)
@@ -210,38 +215,38 @@ class AttendanceStudentFragment : Fragment(R.layout.fragment_attendance_student)
                                 sessions[i] == "P" -> {
                                     if (i == 0){
 
-                                        relativeSessions[i].setBackgroundResource(R.drawable.ic_right_start_green_dark)
-                                        textSessions[i].setBackgroundResource(R.drawable.bg_green_dark)
+                                        imagesSessions[i].setImageResource(R.drawable.ic_right_start_green_dark)
+                                        textSessions[i].setBackgroundColor(getColor(requireContext(),R.color.colorGreenDark))
                                         binding.apply {
                                             viewAttendanceStudentSession1.setBackgroundColor(getColor(requireContext(), R.color.colorGreenDark))
                                         }
 
 
                                     } else if(i == 7) {
-                                        textSessions[i].setBackgroundResource(R.drawable.bg_green_light)
-                                        relativeSessions[i].setBackgroundResource(R.drawable.ic_left_finish_green_light)
+                                        textSessions[i].setBackgroundColor(getColor(requireContext(),R.color.colorGreenLight))
+                                        imagesSessions[i].setImageResource(R.drawable.ic_left_finish_green_light)
                                         binding.apply {
-                                            viewAttendanceStudentSession8.setBackgroundColor(getColor(requireContext(), R.color.colorGreenDark))
+                                            viewAttendanceStudentSession8.setBackgroundColor(getColor(requireContext(), R.color.colorGreenLight))
                                         }
 
                                     } else if (i % 2 == 0){
-                                        textSessions[i].setBackgroundResource(R.drawable.bg_green_light)
-                                        relativeSessions[i].setBackgroundResource(R.drawable.ic_left_finish_green_light)
+                                        textSessions[i].setBackgroundColor(getColor(requireContext(),R.color.colorGreenDark))
+                                        imagesSessions[i].setImageResource(R.drawable.ic_left_green_dark)
 
                                     } else if (i % 2 != 0) {
-                                        textSessions[i].setBackgroundResource(R.drawable.bg_green_dark)
-                                        relativeSessions[i].setBackgroundResource(R.drawable.ic_right_start_green_dark)
+                                        textSessions[i].setBackgroundColor(getColor(requireContext(),R.color.colorGreenLight))
+                                        imagesSessions[i].setImageResource(R.drawable.ic_right_green_light)
 
                                     }
 
                                 }
                                 sessions[i] == "A" -> {
 
-                                    textSessions[i].setBackgroundResource(R.drawable.bg_red)
+                                    textSessions[i].setBackgroundColor(getColor(requireContext(),R.color.colorRed))
 
                                     if (i == 0){
 
-                                        relativeSessions[i].setBackgroundResource(R.drawable.ic_right_start_red)
+                                        imagesSessions[i].setImageResource(R.drawable.ic_right_start_red)
                                         binding.apply {
                                             viewAttendanceStudentSession1.setBackgroundColor(getColor(requireContext(), R.color.colorRed))
                                         }
@@ -249,28 +254,28 @@ class AttendanceStudentFragment : Fragment(R.layout.fragment_attendance_student)
 
                                     } else if(i == 7) {
 
-                                        relativeSessions[i].setBackgroundResource(R.drawable.ic_left_finish_red)
+                                        imagesSessions[i].setImageResource(R.drawable.ic_left_finish_red)
                                         binding.apply {
                                             viewAttendanceStudentSession8.setBackgroundColor(getColor(requireContext(), R.color.colorRed))
                                         }
 
                                     } else if (i % 2 == 0){
 
-                                        relativeSessions[i].setBackgroundResource(R.drawable.ic_left_finish_red)
+                                        imagesSessions[i].setImageResource(R.drawable.ic_left_red)
 
                                     } else if (i % 2 != 0) {
 
-                                        relativeSessions[i].setBackgroundResource(R.drawable.ic_right_start_red)
+                                        imagesSessions[i].setImageResource(R.drawable.ic_right_red)
 
                                     }
                                 }
                                 sessions[i] == "N" -> {
 
-                                    textSessions[i].setBackgroundResource(R.drawable.bg_primary)
+                                    textSessions[i].setBackgroundColor(getColor(requireContext(),R.color.colorPrimary))
 
                                     if (i == 0){
 
-                                        relativeSessions[i].setBackgroundResource(R.drawable.ic_right_start_primary)
+                                        imagesSessions[i].setImageResource(R.drawable.ic_right_start_primary)
                                         binding.apply {
                                             viewAttendanceStudentSession1.setBackgroundColor(getColor(requireContext(), R.color.colorPrimary))
                                         }
@@ -278,18 +283,18 @@ class AttendanceStudentFragment : Fragment(R.layout.fragment_attendance_student)
 
                                     } else if(i == 7) {
 
-                                        relativeSessions[i].setBackgroundResource(R.drawable.ic_left_finish_primary)
+                                        imagesSessions[i].setImageResource(R.drawable.ic_left_finish_primary)
                                         binding.apply {
                                             viewAttendanceStudentSession8.setBackgroundColor(getColor(requireContext(), R.color.colorPrimary))
                                         }
 
                                     } else if (i % 2 == 0){
 
-                                        relativeSessions[i].setBackgroundResource(R.drawable.ic_left_finish_primary)
+                                        imagesSessions[i].setImageResource(R.drawable.ic_left_primary)
 
                                     } else if (i % 2 != 0) {
 
-                                        relativeSessions[i].setBackgroundResource(R.drawable.ic_right_start_primary)
+                                        imagesSessions[i].setImageResource(R.drawable.ic_right_primary)
 
                                     }
                                 }
@@ -301,6 +306,7 @@ class AttendanceStudentFragment : Fragment(R.layout.fragment_attendance_student)
                     viewModel.setStateEvent(AttendanceStudentStateEvent.None)
                 }
                 is DataState.Failure -> {
+                    Log.d("DataState","Failure")
 
                     binding.apply {
                         swipeRefreshAttendanceStudentStudentStudent.isRefreshing = false
@@ -314,6 +320,7 @@ class AttendanceStudentFragment : Fragment(R.layout.fragment_attendance_student)
                     Common.showSnackBar(requireContext(), binding.root, it.message)
                 }
                 is DataState.ExceptionState -> {
+                    Log.d("DataState","ExceptionState")
 
                     binding.apply {
                         swipeRefreshAttendanceStudentStudentStudent.isRefreshing = false
@@ -333,14 +340,14 @@ class AttendanceStudentFragment : Fragment(R.layout.fragment_attendance_student)
 
     private fun initRelativeSessions() {
         binding.apply {
-            relativeSessions.add(relativeAttendanceStudentSession1)
-            relativeSessions.add(relativeAttendanceStudentSession2)
-            relativeSessions.add(relativeAttendanceStudentSession3)
-            relativeSessions.add(relativeAttendanceStudentSession4)
-            relativeSessions.add(relativeAttendanceStudentSession5)
-            relativeSessions.add(relativeAttendanceStudentSession6)
-            relativeSessions.add(relativeAttendanceStudentSession7)
-            relativeSessions.add(relativeAttendanceStudentSession8)
+            imagesSessions.add(imgAttendanceStudentSession1)
+            imagesSessions.add(imgAttendanceStudentSession2)
+            imagesSessions.add(imgAttendanceStudentSession3)
+            imagesSessions.add(imgAttendanceStudentSession4)
+            imagesSessions.add(imgAttendanceStudentSession5)
+            imagesSessions.add(imgAttendanceStudentSession6)
+            imagesSessions.add(imgAttendanceStudentSession7)
+            imagesSessions.add(imgAttendanceStudentSession8)
         }
     }
 

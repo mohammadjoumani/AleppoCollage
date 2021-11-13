@@ -47,7 +47,6 @@ object Common {
     const val USER_TOPICS = "UserTopics"
     const val ALL_TOPIC = "all"
 
-    // TODO: 28/04/2021 Clear it on newer version
     const val SHOULD_CLEAN_DATA = "ShouldCleanData"
 
     private const val APP_VERSION = "6_3_1"

@@ -3,6 +3,8 @@ package com.example.aleppocollage.ui.notification
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.getColor
 import androidx.core.view.isVisible
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
@@ -74,7 +76,9 @@ class NotificationFragment : Fragment(R.layout.fragment_notification) {
 
             }
 
-            binding.swipeRefreshNotification.setOnRefreshListener {
+            swipeRefreshNotification.setColorSchemeColors(getColor(requireContext(), R.color.colorPrimary))
+
+            swipeRefreshNotification.setOnRefreshListener {
 
                 if (userType == "Student") {
                     val student = Common.getCurrentStudent()

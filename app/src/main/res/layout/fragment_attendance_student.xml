@@ -468,123 +468,185 @@
                         android:text="@string/strStartTime"
                         android:textColor="@color/colorPrimary"
                         android:textSize="16sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
 
-                    <TextView
-                        android:id="@+id/txtAttendanceStudentNameSession1"
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardAttendanceStudentNameSession1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/bg_red"
-                        android:fontFamily="@font/cairo_bold"
-                        android:padding="8dp"
-                        android:text="@string/strFirstSession"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="16sp"
+                        app:cardCornerRadius="10dp"
                         app:layout_constraintBottom_toBottomOf="@+id/relativeAttendanceStudentSession1"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/relativeAttendanceStudentSession1"
                         app:layout_constraintStart_toEndOf="@+id/relativeAttendanceStudentSession1"
-                        app:layout_constraintTop_toTopOf="@+id/relativeAttendanceStudentSession1" />
+                        app:layout_constraintTop_toTopOf="@+id/relativeAttendanceStudentSession1" >
 
-                    <TextView
-                        android:id="@+id/txtAttendanceStudentNameSession2"
+                        <TextView
+                            android:id="@+id/txtAttendanceStudentNameSession1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorRed"
+                            android:padding="8dp"
+                            android:fontFamily="@font/cairo_bold"
+                            android:text="@string/strFirstSession"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="16sp"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardAttendanceStudentNameSession2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/bg_green_light"
-                        android:fontFamily="@font/cairo_bold"
-                        android:padding="8dp"
-                        android:text="@string/strSecondSession"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="16sp"
+                        app:cardCornerRadius="10dp"
                         app:layout_constraintEnd_toStartOf="@+id/relativeAttendanceStudentSession2"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/txtAttendanceStudentNameSession1" />
+                        app:layout_constraintTop_toBottomOf="@+id/cardAttendanceStudentNameSession1" >
 
-                    <TextView
-                        android:id="@+id/txtAttendanceStudentNameSession3"
+                        <TextView
+                            android:id="@+id/txtAttendanceStudentNameSession2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorGreenLight"
+                            android:fontFamily="@font/cairo_bold"
+                            android:padding="8dp"
+                            android:text="@string/strSecondSession"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="16sp"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardAttendanceStudentNameSession3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/bg_green_dark"
-                        android:fontFamily="@font/cairo_bold"
-                        android:padding="8dp"
-                        android:text="@string/strThirdSession"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="16sp"
+                        app:cardCornerRadius="10dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/relativeAttendanceStudentSession3"
-                        app:layout_constraintTop_toBottomOf="@+id/txtAttendanceStudentNameSession2" />
+                        app:layout_constraintTop_toBottomOf="@+id/cardAttendanceStudentNameSession2" >
 
-                    <TextView
-                        android:id="@+id/txtAttendanceStudentNameSession4"
+                        <TextView
+                            android:id="@+id/txtAttendanceStudentNameSession3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorGreenDark"
+                            android:fontFamily="@font/cairo_bold"
+                            android:padding="8dp"
+                            android:text="@string/strThirdSession"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="16sp"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardAttendanceStudentNameSession4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/bg_green_light"
-                        android:fontFamily="@font/cairo_bold"
-                        android:padding="8dp"
-                        android:text="@string/strFourthSession"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="16sp"
+                        app:cardCornerRadius="10dp"
                         app:layout_constraintEnd_toStartOf="@+id/relativeAttendanceStudentSession4"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/txtAttendanceStudentNameSession3" />
+                        app:layout_constraintTop_toBottomOf="@+id/cardAttendanceStudentNameSession3">
 
-                    <TextView
-                        android:id="@+id/txtAttendanceStudentNameSession5"
+                        <TextView
+                            android:id="@+id/txtAttendanceStudentNameSession4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorGreenLight"
+                            android:fontFamily="@font/cairo_bold"
+                            android:padding="8dp"
+                            android:text="@string/strFourthSession"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="16sp"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardAttendanceStudentNameSession5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/bg_green_dark"
-                        android:fontFamily="@font/cairo_bold"
-                        android:padding="8dp"
-                        android:text="@string/strFifthSession"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="16sp"
+                        app:cardCornerRadius="10dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/relativeAttendanceStudentSession5"
-                        app:layout_constraintTop_toBottomOf="@+id/txtAttendanceStudentNameSession4" />
+                        app:layout_constraintTop_toBottomOf="@+id/cardAttendanceStudentNameSession4">
 
-                    <TextView
-                        android:visibility="gone"
-                        android:id="@+id/txtAttendanceStudentNameSession6"
+                        <TextView
+                            android:id="@+id/txtAttendanceStudentNameSession5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorGreenDark"
+                            android:fontFamily="@font/cairo_bold"
+                            android:padding="8dp"
+                            android:text="@string/strFifthSession"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="16sp"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardAttendanceStudentNameSession6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/bg_green_light"
-                        android:fontFamily="@font/cairo_bold"
-                        android:padding="8dp"
-                        android:text="@string/strSixthSession"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="16sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/relativeAttendanceStudentSession6"
-                        app:layout_constraintTop_toBottomOf="@+id/txtAttendanceStudentNameSession5" />
-
-                    <TextView
-                        android:id="@+id/txtAttendanceStudentNameSession7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/bg_green_dark"
-                        android:fontFamily="@font/cairo_bold"
-                        android:padding="8dp"
-                        android:text="@string/strSeventhSession"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="16sp"
+                        app:cardCornerRadius="10dp"
                         app:layout_constraintEnd_toStartOf="@+id/relativeAttendanceStudentSession6"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/txtAttendanceStudentNameSession6" />
+                        app:layout_constraintTop_toBottomOf="@+id/cardAttendanceStudentNameSession5" >
 
-                    <TextView
-                        android:id="@+id/txtAttendanceStudentNameSession8"
+                        <TextView
+                            android:id="@+id/txtAttendanceStudentNameSession6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorGreenLight"
+                            android:fontFamily="@font/cairo_bold"
+                            android:padding="8dp"
+                            android:text="@string/strSixthSession"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="16sp"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardAttendanceStudentNameSession7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/bg_primary"
-                        android:fontFamily="@font/cairo_bold"
-                        android:padding="8dp"
-                        android:text="@string/strEightSession"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="16sp"
+                        app:cardCornerRadius="10dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/relativeAttendanceStudentSession7"
-                        app:layout_constraintTop_toBottomOf="@+id/txtAttendanceStudentNameSession7" />
+                        app:layout_constraintTop_toBottomOf="@+id/cardAttendanceStudentNameSession6">
+
+                        <TextView
+                            android:id="@+id/txtAttendanceStudentNameSession7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorGreenDark"
+                            android:fontFamily="@font/cairo_bold"
+                            android:padding="8dp"
+                            android:text="@string/strSeventhSession"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="16sp"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardAttendanceStudentNameSession8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toStartOf="@+id/relativeAttendanceStudentSession8"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cardAttendanceStudentNameSession7">
+
+                        <TextView
+                            android:id="@+id/txtAttendanceStudentNameSession8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_primary"
+                            android:fontFamily="@font/cairo_bold"
+                            android:padding="8dp"
+                            android:text="@string/strEightSession"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="16sp" />
+
+                    </androidx.cardview.widget.CardView>
 
                     <androidx.constraintlayout.widget.Guideline
                         android:id="@+id/guideline"

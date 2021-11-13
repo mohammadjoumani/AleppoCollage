@@ -72,6 +72,8 @@ class MarkFragment : Fragment(R.layout.fragment_mark) {
                 sharedViewModel.showProfileInfo.value = ProfileInfo(userType = Common.getCurrentTypeUser(),Common.getCurrentStudent()!!, state = state)
             }
 
+            swipeRefreshMarkFragmentStudent.setColorSchemeColors(getColor(requireContext(), R.color.colorPrimary))
+
             swipeRefreshMarkFragmentStudent.setOnRefreshListener {
                 for (i in 0..11) {
                     linearMonth[i].setBackgroundColor(

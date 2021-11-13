@@ -57,6 +57,7 @@
         <entry key="..\:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/res/drawable/ic_right_start.xml" value="0.21354166666666666" />
         <entry key="..\:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/res/drawable/ic_right_start_gree.xml" value="0.20555555555555555" />
         <entry key="..\:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/res/drawable/ic_right_start_green.xml" value="0.20555555555555555" />
+        <entry key="..\:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/res/drawable/ic_right_start_green_dark.xml" value="0.21354166666666666" />
         <entry key="..\:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/res/drawable/ic_right_start_primary.xml" value="0.20555555555555555" />
         <entry key="..\:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/res/drawable/ic_take_absence.xml" value="0.21354166666666666" />
         <entry key="..\:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/res/drawable/ic_test.xml" value="0.21354166666666666" />
@@ -69,7 +70,7 @@
         <entry key="..\:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/res/layout/dialog_loading.xml" value="0.1925925925925926" />
         <entry key="..\:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/res/layout/fragment_absence_student.xml" value="0.22" />
         <entry key="..\:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/res/layout/fragment_absence_teacher.xml" value="0.19739583333333333" />
-        <entry key="..\:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/res/layout/fragment_attendance_student.xml" value="0.25" />
+        <entry key="..\:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/res/layout/fragment_attendance_student.xml" value="0.16" />
         <entry key="..\:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/res/layout/fragment_attendance_teacher.xml" value="0.25" />
         <entry key="..\:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/res/layout/fragment_checked_exam.xml" value="0.13796296296296295" />
         <entry key="..\:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/res/layout/fragment_exam.xml" value="0.19739583333333333" />
@@ -78,7 +79,7 @@
         <entry key="..\:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/res/layout/fragment_exam_new.xml" value="0.2" />
         <entry key="..\:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/res/layout/fragment_home_student.xml" value="0.2" />
         <entry key="..\:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/res/layout/fragment_home_teacher.xml" value="0.16" />
-        <entry key="..\:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/res/layout/fragment_mark.xml" value="0.22" />
+        <entry key="..\:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/res/layout/fragment_mark.xml" value="0.2" />
         <entry key="..\:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/res/layout/fragment_new_exam.xml" value="0.2" />
         <entry key="..\:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/res/layout/fragment_notification.xml" value="0.25" />
         <entry key="..\:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/res/layout/fragment_payment.xml" value="0.18333333333333332" />

@@ -62,7 +62,6 @@
     <string name="strNovember">تشرين</string>
     <string name="strDecember">كانون</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="strThereIsProblem">يوجد مشكلة بالاتصال بالسيرفر</string>
     <string name="strShouldSelectYearAndGroup">يجب تحديد المجموعة والسنة</string>
