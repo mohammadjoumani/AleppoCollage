@@ -88,66 +88,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <RelativeLayout
-                android:id="@+id/relativeLayout"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <EditText
-                    android:id="@+id/edtNewExamMark"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dmHalfMarginTop"
-                    android:layout_marginStart="@dimen/dmMarginStart"
-                    android:layout_marginEnd="@dimen/dmMarginEnd"
-                    android:layout_marginBottom="@dimen/dmHalfMarginBottom"
-                    android:background="@drawable/bg_edit_text_border"
-                    android:elevation="@dimen/dmElevationRegisterStudentEditText"
-                    android:fontFamily="@font/cairo_regular"
-                    android:hint="@string/strEnterTopMark"
-                    android:inputType="text"
-                    android:paddingStart="@dimen/dmPaddingStartRegisterStudentEditText"
-                    android:paddingEnd="@dimen/dmPaddingEndRegisterStudentEditText" />
-
-                <EditText
-                    android:id="@+id/edtNewExamDescription"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/edtNewExamMark"
-                    android:layout_marginTop="@dimen/dmHalfMarginTop"
-                    android:layout_marginStart="@dimen/dmMarginStart"
-                    android:layout_marginEnd="@dimen/dmMarginEnd"
-                    android:layout_marginBottom="@dimen/dmHalfMarginBottom"
-                    android:background="@drawable/bg_edit_text_border"
-                    android:elevation="@dimen/dmElevationRegisterStudentEditText"
-                    android:fontFamily="@font/cairo_regular"
-                    android:hint="@string/strDescription"
-                    android:inputType="text"
-                    android:paddingStart="@dimen/dmPaddingStartRegisterStudentEditText"
-                    android:paddingEnd="@dimen/dmPaddingEndRegisterStudentEditText" />
-
-                <Button
-                    android:id="@+id/btnNewExamEnterMark"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/edtNewExamDescription"
-                    android:layout_marginStart="@dimen/dmMarginStart"
-                    android:layout_marginTop="@dimen/dmHalfMarginTop"
-                    android:layout_marginEnd="@dimen/dmMarginEnd"
-                    android:background="@drawable/bg_button_sign_in_purple"
-                    android:elevation="@dimen/dmElevationButton"
-                    android:fontFamily="@font/cairo_bold"
-                    android:text="@string/strEnterMark"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/dmTextSizeButton" />
-
-            </RelativeLayout>
 
             <ImageView
-                android:id="@+id/imgExamChooseGroup"
+                android:id="@+id/imgMarkTeacherChooseGroup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_aplus"

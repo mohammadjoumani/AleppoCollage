@@ -62,8 +62,7 @@
     <string name="strNovember">تشرين</string>
     <string name="strDecember">كانون</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="strThereIsProblem">يوجد مشكلة بالاتصال بالسيرفر</string>
+    <string name="strThereIsProblem">يوجد مشكلة بالاتصال بالمخدم</string>
     <string name="strShouldSelectYearAndGroup">يجب تحديد المجموعة والسنة</string>
     <string name="strNoPermissionForTeacher">هذه ليست من صلاحيات الأستاذ</string>
     <string name="strEnterMark">أدخل العلامات</string>
@@ -73,4 +72,23 @@
     <string name="strPleaseChooseTeacher">يجب تحديد الأستاذ أولاً</string>
     <string name="strHome">الرئيسية</string>
     <string name="strLogout">تسجيل خروج</string>
+    <string name="strNotFoundMark">لا يوجد علامات</string>
+    <string name="strSaveAttendance">جار حفظ الحضور</string>
+    <string name="strAllAttendance">الجميع حضور</string>
+    <string name="strAllNotAttendance">الجميع غياب</string>
+    <string name="strAllHoliday">عطلة</string>
+    <string name="strPressBackAgainToExit">اضغط زر الرجوع مرة ثانية للخروج من التطبيق</string>
+    <string name="strNotNote">لا يوجد ملاحظات</string>
+    <string name="strThereIsNotGroups">لا يوجد مجموعات</string>
+    <string name="strThereIsNotTeachers">لا يوجد أساتذة</string>
+    <string name="strNameOrPasswordIsWrong">الاسم أو كلمة المرور خطأ</string>
+    <string name="strAddMarkStudent">أدخل علامة الطالب :</string>
+    <string name="strSaveMarks">جار حفظ العلامات</string>
+    <string name="strSaveMark">جار حفظ العلامة</string>
+    <string name="strSuccessSave">تم الحفظ بنجاح</string>
+    <string name="strMarkRequire">العلامة مطلوبة</string>
+    <string name="strDescriptionRequire">الوصف مطلوب</string>
+    <string name="strMarkStudent">علامات الطلاب</string>
+    <string name="strNewExam">مذاكرة جديدة</string>
+
 </resources>

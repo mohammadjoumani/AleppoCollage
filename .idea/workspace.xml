@@ -18,36 +18,127 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="DataState" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="afterTextChanged" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d22cae6-e34f-48cf-8416-032219329f5c" name="Default Changelist" comment="">
+    <list default="true" id="3d22cae6-e34f-48cf-8416-032219329f5c" name="Default Changelist" comment="commit 03 :&#10;01- Fix error in AttendanceStudentFragment .">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_PhilJay_MPAndroidChart_v3_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/render.experimental.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/assets/cairoregular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/exam/teacher/ExamFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/mark/maxmark/MaxMarkFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/mark/maxmark/MaxMarkViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/mark/student/MarkStudentViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/mark/teacher/MarkTeacherFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/util/entermark/EnterMarkSheetFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/util/entermark/EnterMarkViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_false_white.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_info_white.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_true_white.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/item_shimmer_exam_student.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_max_mark.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_toast.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/sheet_fragment_enter_mark.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/pop_menu_student.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_ktx_2_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_ktx_2_2_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_ktx_2_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_ktx_2_2_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_getkeepsafe_taptargetview_taptargetview_1_11_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_getkeepsafe_taptargetview_taptargetview_1_11_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_GrenderG_Toasty_1_5_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_tiper_MaterialSpinner_1_4_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_tiper_MaterialSpinner_1_4_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_flexbox_2_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__nl_bryanderidder_themed_toggle_button_group_1_3_4_aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/Aleppo_Collage.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/Aleppo_Collage.app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/connecter/ConnectDB.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/connecter/ConnectDB.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/model/attendance/domain/Attendance.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/model/attendance/domain/Attendance.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/model/groupstudent/domain/GroupStudent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/model/groupstudent/domain/GroupStudent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/repository/attendance/AttendanceRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/repository/attendance/AttendanceRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/repository/deservedgroup/DeservedGroupRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/repository/deservedgroup/DeservedGroupRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/repository/exam/ExamRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/repository/exam/ExamRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/repository/mark/MarkRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/repository/mark/MarkRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/repository/notification/NotificationRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/repository/notification/NotificationRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/repository/payment/PaymentRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/repository/payment/PaymentRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/repository/register/RegisterRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/repository/register/RegisterRepository.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/attendance/student/AttendanceStudentFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/attendance/student/AttendanceStudentFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/mark/student/MarkFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/mark/student/MarkFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/attendance/teacher/adapter/AttendanceTeacherRecyclerAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/attendance/teacher/adapter/AttendanceTeacherRecyclerAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/attendance/teacher/check/AttendanceTeacherFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/attendance/teacher/AttendanceTeacherFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/attendance/teacher/check/AttendanceTeacherViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/attendance/teacher/AttendanceTeacherViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/attendance/teacher/model/StateAttendance.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/attendance/teacher/set/SetAttendanceTeacherFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/attendance/teacher/set/SetAttendanceTeacherViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/auth/login/student/RegisterStudentFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/auth/login/student/RegisterStudentFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/auth/login/teacher/RegisterTeacherFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/auth/login/teacher/RegisterTeacherFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/exam/teacher/checked/ExamCheckedFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/exam/teacher/checked/ExamCheckedViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/mark/teacher/MarkTeacherViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/exam/teacher/checked/adapter/StudentMarkRecyclerAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/mark/teacher/adapter/MarkTeacherRecyclerAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/exam/teacher/delivered/ExamDeliveredFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/exam/teacher/delivered/ExamDeliveredViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/exam/teacher/examnew/ExamNewFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/exam/teacher/examnew/ExamNewViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/exam/teacher/get/ExamFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/exam/teacher/get/ExamViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/exam/teacher/ExamViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/exam/teacher/get/adapter/DeservedGroupsSpinnerAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/exam/teacher/adapter/DeservedGroupsSpinnerAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/exam/teacher/get/adapter/ExamRecyclerAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/exam/teacher/adapter/ExamRecyclerAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/home/student/HomeStudentFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/home/student/HomeStudentFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/home/student/HomeStudentViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/home/student/HomeStudentViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/home/teacher/HomeTeacherFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/home/teacher/HomeTeacherFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/main/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/main/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/main/model/ProfileInfo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/main/model/ProfileInfo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/mark/student/MarkFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/mark/student/MarkStudentFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/mark/student/MarkViewModel.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/notification/NotificationFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/notification/NotificationFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/payment/student/PaymentStudentFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/payment/student/PaymentStudentFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/payment/teacher/PaymentTeacherFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/payment/teacher/PaymentTeacherFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/util/choosedate/ChooseDateSheetFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/util/choosedate/ChooseDateSheetFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/util/network/ConnectionStateDialog.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/util/network/ConnectionStateDialog.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/util/sharedviewmodel/SharedViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/util/sharedviewmodel/SharedViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/util/Common.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/util/Common.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/util/DataState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/util/DataState.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/bg_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bg_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_attendance_student.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_attendance_student.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_mark.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_mark.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_attendance_teacher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_attendance_teacher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_exam.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_exam.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_exam_checked.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_mark_teacher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_exam_delivered.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_exam_delivered.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_exam_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_exam_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home_student.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home_student.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home_teacher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home_teacher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_mark.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_mark_student.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_payment_student.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_payment_student.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_payment_teacher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_payment_teacher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_register_teacher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_register_teacher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_recycler_mark.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_recycler_mark.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_recycler_student_mark.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_recycler_mark_teacher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/sheet_fragment_choose_date.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/sheet_fragment_choose_date.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ar-rSY/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ar-rSY/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/api-versions-0-30.0.4.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/typos-en.txt-2.bin" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\MohAmmad\.android\avd\Pixel_3_XL_API_30.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[192.168.1.100:5555]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -77,10 +168,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin File" />
-        <option value="layoutResourceFile" />
         <option value="Kotlin Interface" />
         <option value="valueResourceFile" />
         <option value="Kotlin Class" />
+        <option value="layoutResourceFile" />
         <option value="resourceFile" />
       </list>
     </option>
@@ -114,13 +205,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android-custom-viewC:/Users/MohAmmad/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.2.0/3e159bfab49c7e6495fe374e6e5e1e989ee21dcf/recyclerview-1.2.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
+    <property name="android-custom-viewC:/Users/MohAmmad/.gradle/caches/modules-2/files-2.1/com.github.florent37/singledateandtimepicker/2.2.7/dddd67c1ddf58759fe424f7c121f1db1edb8a4bd/singledateandtimepicker-2.2.7-sources.jar!/com/github/florent37/singledateandtimepicker/SingleDateAndTimePicker.java_SELECTED" value="SingleDateAndTimePicker" />
+    <property name="android-custom-viewC:/Users/MohAmmad/.gradle/caches/modules-2/files-2.1/com.github.florent37/singledateandtimepicker/2.2.7/dddd67c1ddf58759fe424f7c121f1db1edb8a4bd/singledateandtimepicker-2.2.7-sources.jar!/com/github/florent37/singledateandtimepicker/SingleDateAndTimePicker.java_SingleDateAndTimePicker_DIMENSIONS" value="1080&#10;1920" />
     <property name="android-custom-viewC:/Users/MohAmmad/.gradle/caches/modules-2/files-2.1/com.github.tiper/MaterialSpinner/1.4.2/21f782096c5156c6193bb38b753b7509a7effdc1/MaterialSpinner-1.4.2-sources.jar!/com/tiper/MaterialSpinner.kt_SELECTED" value="MaterialSpinner" />
     <property name="android-custom-viewC:/Users/MohAmmad/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.3.0/b42a5159ef2c670d26ce08246ec5aaf8f92e5a42/material-1.3.0-sources.jar!/com/google/android/material/bottomnavigation/BottomNavigationView.java_SELECTED" value="BottomNavigationView" />
     <property name="android-custom-viewC:/Users/MohAmmad/.gradle/caches/modules-2/files-2.1/com.wang.avi/library/2.1.3/b24ad2ac7fd480af6dc1d0302f5328b46c586200/library-2.1.3-sources.jar!/com/wang/avi/AVLoadingIndicatorView.java_SELECTED" value="AVLoadingIndicatorView" />
     <property name="android-custom-viewC:/Users/MohAmmad/AndroidStudioProjects/AleppoCollage/app/src/main/java/com/example/aleppocollage/CustomSpinner.java_SELECTED" value="CustomSpinner" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/example/aleppocollage/ui/mark/maxmark" />
     <property name="multi-representation-previewC:/Users/MohAmmad/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.2.0/3e159bfab49c7e6495fe374e6e5e1e989ee21dcf/recyclerview-1.2.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_selected" value="Custom views" />
     <property name="multi-representation-previewC:/Users/MohAmmad/.gradle/caches/modules-2/files-2.1/com.github.tiper/MaterialSpinner/1.4.2/21f782096c5156c6193bb38b753b7509a7effdc1/MaterialSpinner-1.4.2-sources.jar!/com/tiper/MaterialSpinner.kt_selected" value="Custom views" />
     <property name="multi-representation-previewC:/Users/MohAmmad/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.3.0/b42a5159ef2c670d26ce08246ec5aaf8f92e5a42/material-1.3.0-sources.jar!/com/google/android/material/bottomnavigation/BottomNavigationView.java_selected" value="Custom views" />
@@ -134,36 +227,38 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\MohAmmad\AndroidStudioProjects\AleppoCollage\app\src\main\res\drawable-v24" />
+      <recent name="C:\Users\MohAmmad\AndroidStudioProjects\AleppoCollage\app\src\main\java\com\example\aleppocollage\ui\mark\maxmark" />
       <recent name="C:\Users\MohAmmad\AndroidStudioProjects\AleppoCollage\app\src\main\res\layout" />
-      <recent name="C:\Users\MohAmmad\AndroidStudioProjects\AleppoCollage\app\src\main\java\com\example\aleppocollage\model\groupstudent" />
-      <recent name="C:\Users\MohAmmad\AndroidStudioProjects\AleppoCollage\app\src\main\java\com\example\aleppocollage\ui\exam\teacher\delivered" />
+      <recent name="C:\Users\MohAmmad\AndroidStudioProjects\AleppoCollage\app\src\main\assets" />
+      <recent name="C:\Users\MohAmmad\AndroidStudioProjects\AleppoCollage\app\src\main\res\menu" />
       <recent name="C:\Users\MohAmmad\AndroidStudioProjects\AleppoCollage\app\src\main\res\drawable" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\MohAmmad\AndroidStudioProjects\AleppoCollage\app\src\main\java\com\example\aleppocollage\ui\exam\teacher" />
+      <recent name="C:\Users\MohAmmad\AndroidStudioProjects\AleppoCollage\app\src\main\java\com\example\aleppocollage\ui\mark\teacher" />
       <recent name="C:\Users\MohAmmad\AndroidStudioProjects\AleppoCollage\app\src\main\res\drawable-v24" />
       <recent name="C:\Users\MohAmmad\AndroidStudioProjects\AleppoCollage\app\src\main\java\com\example\aleppocollage\ui\exam\teacher\get" />
       <recent name="C:\Users\MohAmmad\AndroidStudioProjects\AleppoCollage\app\src\main\java\com\example\aleppocollage\ui\attendance\teacher\check" />
-      <recent name="C:\Users\MohAmmad\AndroidStudioProjects\AleppoCollage\app\src\main\java\com\example\aleppocollage\ui\notification" />
-      <recent name="C:\Users\MohAmmad\AndroidStudioProjects\AleppoCollage\app\src\main\java\com\example\aleppocollage\ui\notification\teacher" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.example.aleppocollage.ui.mark.maxmark" />
+      <recent name="com.example.aleppocollage.ui.attendance.teacher" />
       <recent name="com.example.aleppocollage.ui.exam.teacher.aaa" />
       <recent name="com.example.aleppocollage.ui.exam.teacher" />
       <recent name="com.example.aleppocollage.ui.util.network.model" />
-      <recent name="com.example.aleppocollage.model.deservedgroup.domain" />
-      <recent name="com.example.aleppocollage.ui.test.teacher" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.aleppocollage.ui.attendance.teacher" />
+      <recent name="com.example.aleppocollage.ui.attendance.teacher.set" />
       <recent name="com.example.aleppocollage.ui.exam.teacher" />
       <recent name="com.example.aleppocollage.ui" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.example.aleppocollage.ui.util.entermark" />
       <recent name="com.example.aleppocollage.ui.exam.teacher.delivered" />
       <recent name="com.example.aleppocollage.ui.exam.teacher.checked.adapter" />
       <recent name="com.example.aleppocollage.ui.exam.teacher.checked" />
       <recent name="com.example.aleppocollage.ui.exam.teacher.new" />
-      <recent name="com.example.aleppocollage.ui.attendance.teacher.set" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.aleppocollage.listner" />
@@ -326,7 +421,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635431322222</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="commit 03 :&#10;01- Fix error in AttendanceStudentFragment .">
+      <created>1636804794083</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1636804794083</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

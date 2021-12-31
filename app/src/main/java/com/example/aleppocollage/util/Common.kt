@@ -7,6 +7,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
+import android.graphics.Typeface
 import android.net.Uri
 import android.os.Build
 import android.os.Environment
@@ -14,18 +15,25 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.getColor
 import androidx.fragment.app.Fragment
 import com.example.aleppocollage.R
 import com.example.aleppocollage.model.user.domain.Student
 import com.example.aleppocollage.model.user.domain.Teacher
+import com.example.aleppocollage.ui.main.MainActivity
 import com.google.android.material.snackbar.Snackbar
 import io.paperdb.Paper
 import java.io.ByteArrayOutputStream
 import java.io.File
+import java.nio.file.Files
+import java.nio.file.Path
+import java.nio.file.Paths
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -204,8 +212,33 @@ object Common {
         }
     }
 
-    fun showToast(context: Context, message: String) {
-        Toast.makeText(context, message, Toast.LENGTH_LONG).show()
+    fun showToast(activity: Activity, message: String, type: String) {
+        val layout = activity.layoutInflater.inflate (R.layout.item_toast, activity.findViewById(R.id.cardToast))
+
+        val txtToast = layout.findViewById<TextView>(R.id.txtToast)
+        val imgToast = layout.findViewById<ImageView>(R.id.imgToast)
+        val linearToast = layout.findViewById<LinearLayout>(R.id.linearToast)
+
+        when(type) {
+            "error" -> {
+                linearToast.setBackgroundColor(getColor(activity,R.color.colorRed))
+                imgToast.setImageResource(R.drawable.ic_false_white)
+            }
+            "warning" -> {
+                linearToast.setBackgroundColor(getColor(activity, R.color.purple_500))
+                imgToast.setImageResource(R.drawable.ic_info_white)
+            }
+            "success" -> {
+                linearToast.setBackgroundColor(getColor(activity, R.color.colorGreenLight))
+                imgToast.setImageResource(R.drawable.ic_true_white)
+            }
+        }
+        txtToast.text = message
+        Toast(activity).apply {
+            duration = Toast.LENGTH_SHORT
+            view = layout
+            show()
+        }
     }
 
     fun showSnackBar(context: Context, view: View, message: String, withAction: Boolean = false) {
@@ -216,7 +249,7 @@ object Common {
         //snackBar.setActionTextColor(Color.BLUE)
 
         val snackBarView = snackBar.view
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             snackBarView.setBackgroundColor(context.getColor(R.color.colorRed))
         }
 
@@ -225,12 +258,13 @@ object Common {
         snackBarView.layoutParams = param
 
         val textView =
-            snackBarView.findViewById(com.google.android.material.R.id.snackbar_text) as TextView
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+            snackBarView.findViewById(R.id.snackbar_text) as TextView
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             textView.setTextColor(context.getColor(R.color.colorWhite))
             snackBar.setActionTextColor(context.getColor(R.color.colorWhite))
         }
         textView.textSize = 16f
+        textView.typeface = Typeface.createFromAsset(context.assets,"cairoregular.ttf")
 
         if (withAction) {
             snackBar.setAction(context.getString(R.string.strOk)) {
@@ -334,7 +368,7 @@ object Common {
 
     fun getCurrentDate(): String {
         val calendar = Calendar.getInstance()
-        val pattern = "dd/MM/yyyy"
+        val pattern = "dd-MM-yyyy"
         val simpleDateFormat = SimpleDateFormat(pattern, Locale(ENGLISH_LOCALE_LANG))
         return simpleDateFormat.format(calendar.time)
     }
@@ -342,6 +376,13 @@ object Common {
     fun getCurrentYear(): String {
         val calendar = Calendar.getInstance()
         val pattern = "yyyy"
+        val simpleDateFormat = SimpleDateFormat(pattern, Locale(ENGLISH_LOCALE_LANG))
+        return simpleDateFormat.format(calendar.time)
+    }
+
+    fun getCurrentMonth(): String {
+        val calendar = Calendar.getInstance()
+        val pattern = "MM"
         val simpleDateFormat = SimpleDateFormat(pattern, Locale(ENGLISH_LOCALE_LANG))
         return simpleDateFormat.format(calendar.time)
     }
@@ -366,19 +407,17 @@ object Common {
         return Paper.book().read(CURRENT_TEACHER, null)
     }
 
-    fun createFolderApp(
-        childOne: String = "", childTwo: String = ""): String {
+    fun createFolderApp(childOne: String = "", childTwo: String = ""): String {
 
         var file: File? = null
 
         file = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            File(
-                "${Environment.getExternalStoragePublicDirectory(null)}" + "/" + childOne, childTwo)
+            File("${Environment.getExternalStorageDirectory()}" + "/" + childOne, childTwo)
         } else {
             File("${Environment.getExternalStorageDirectory()}" + "/" + childOne, childTwo)
         }
 
-        if (!file!!.exists()) {
+        if (!file.exists()) {
             file.mkdirs()
         }
 

@@ -3,6 +3,7 @@ package com.example.aleppocollage.ui.attendance.teacher.adapter
 import android.content.Context
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -43,7 +44,6 @@ class AttendanceTeacherRecyclerAdapter(
         val binding: ItemRecyclerAttendanceBinding,
         private val context: Context,
         val adapter: AttendanceTeacherRecyclerAdapter) : RecyclerView.ViewHolder(binding.root) {
-
         fun bind(itemEntity: Attendance) {
 
             val values: ArrayList<String?> = ArrayList()
@@ -79,7 +79,7 @@ class AttendanceTeacherRecyclerAdapter(
 
                     edtRecyclerAttendanceNote.setText("")
 
-                } else if (itemEntity.toString().trim().equals("")) {
+                } else if (itemEntity.toString().trim() == "") {
 
                     edtRecyclerAttendanceNote.setText("")
                 }
@@ -92,44 +92,38 @@ class AttendanceTeacherRecyclerAdapter(
                     override fun onTextChanged(
                         charSequence: CharSequence?, p1: Int, p2: Int, p3: Int) {
                         itemEntity.note = charSequence.toString()
-//                        adapter.notifyItemChanged(layoutPosition)
-//                        adapter.saveNote(charSequence.toString(),this@AttendanceTeacherViewHolder,itemEntity)
+                        //adapter.notifyItemChanged(layoutPosition)
                     }
 
                     override fun afterTextChanged(p0: Editable?) {
+//                        adapter.notifyItemChanged(layoutPosition)
                     }
                 })
 
                 for (i in 0 until sessions.size) {
 
                     sessions[i].setOnClickListener {
-
                         sessions[i].animation = AnimationUtils.loadAnimation(context, R.anim.anim_bubble_animation)
-
                         adapter.changeState(sessions[i],this@AttendanceTeacherViewHolder, itemEntity)
-
                     }
 
-                    if (values[i] == null) {
-
-                        sessions[i].setBackgroundResource(R.drawable.bg_gray)
-                        sessions[i].setTextColor(getColor(context,R.color.colorBlack))
-
-                    } else if (values[i] == "P") {
-
-                        sessions[i].setBackgroundResource(R.drawable.bg_rounded_primary)
-                        sessions[i].setTextColor(getColor(context,R.color.colorWhite))
-
-                    } else if (values[i] == "A") {
-
-                        sessions[i].setBackgroundResource(R.drawable.bg_rounded_red)
-                        sessions[i].setTextColor(getColor(context,R.color.colorWhite))
-
-                    } else if (values[i] == "N") {
-
-                        sessions[i].setBackgroundResource(R.drawable.bg_rounded_green)
-                        sessions[i].setTextColor(getColor(context,R.color.colorWhite))
-
+                    when {
+                        values[i] == null -> {
+                            sessions[i].setBackgroundResource(R.drawable.bg_gray)
+                            sessions[i].setTextColor(getColor(context,R.color.colorBlack))
+                        }
+                        values[i] == "P" -> {
+                            sessions[i].setBackgroundResource(R.drawable.bg_rounded_primary)
+                            sessions[i].setTextColor(getColor(context,R.color.colorWhite))
+                        }
+                        values[i] == "A" -> {
+                            sessions[i].setBackgroundResource(R.drawable.bg_rounded_red)
+                            sessions[i].setTextColor(getColor(context,R.color.colorWhite))
+                        }
+                        values[i] == "N" -> {
+                            sessions[i].setBackgroundResource(R.drawable.bg_rounded_green)
+                            sessions[i].setTextColor(getColor(context,R.color.colorWhite))
+                        }
                     }
 
                 }
@@ -155,14 +149,19 @@ class AttendanceTeacherRecyclerAdapter(
         values.add(attendance.session9)
 
         val state = values[sessionNo]
-        if (state == null) {
-            values[sessionNo] = "P"
-        } else if (state == "N") {
-            values[sessionNo] = "P"
-        } else if (state == "P") {
-            values[sessionNo] = "A"
-        } else if (state == "A") {
-            values[sessionNo] = "N"
+        when (state) {
+            null -> {
+                values[sessionNo] = "P"
+            }
+            "N" -> {
+                values[sessionNo] = "P"
+            }
+            "P" -> {
+                values[sessionNo] = "A"
+            }
+            "A" -> {
+                values[sessionNo] = "N"
+            }
         }
         attendance.session0 = values[0]
         attendance.session1 = values[1]
@@ -181,6 +180,7 @@ class AttendanceTeacherRecyclerAdapter(
 //        attendance.note = note
 //        notifyItemChanged(attendanceTeacherViewHolder.layoutPosition)
 //    }
+
     fun setData(absences: List<Attendance>) {
         this.attendances = absences
         notifyDataSetChanged()

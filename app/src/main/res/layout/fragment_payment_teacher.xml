@@ -103,85 +103,92 @@
             android:textSize="@dimen/dmTextSizeTitleTextView" />
     </RelativeLayout>
 
-    <Spinner
-        android:id="@+id/spinnerPaymentTeacherYear"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dmMarginStart"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="@dimen/dmMarginEnd"
-        android:background="@drawable/bg_spinner_down"
-        android:dropDownVerticalOffset="50dp"
-        android:elevation="@dimen/dmElevationSpinner"
-        android:fontFamily="@font/cairo_regular"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativePaymentTeacherAppBar" />
-
-    <ScrollView
-        android:layout_width="match_parent"
+        android:id="@+id/swipeRefreshPaymentTeacher"
         android:layout_height="0dp"
-        android:fillViewport="true"
         app:layout_constraintBottom_toTopOf="@+id/linearPaymentTeacherSummary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerPaymentTeacherYear">
+        app:layout_constraintTop_toBottomOf="@+id/relativePaymentTeacherAppBar">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinnerPaymentTeacherYear">
+            android:orientation="vertical">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerPaymentTeacher"
+            <Spinner
+                android:id="@+id/spinnerPaymentTeacherYear"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="visible"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/item_recycler_payment" />
+                android:layout_marginStart="@dimen/dmMarginStart"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/dmMarginEnd"
+                android:background="@drawable/bg_spinner_down"
+                android:dropDownVerticalOffset="50dp"
+                android:elevation="@dimen/dmElevationSpinner"
+                android:fontFamily="@font/cairo_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relativePaymentTeacherAppBar" />
 
-            <!--        Shimmer for payment-->
-            <com.facebook.shimmer.ShimmerFrameLayout
-                android:id="@+id/shimmerAnimationPaymentTeacher"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                tools:visibility="gone">
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerPaymentTeacherYear">
 
-                <LinearLayout
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerPaymentTeacher"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_recycler_payment" />
 
-                    <ImageView
+                <!--        Shimmer for payment-->
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmerAnimationPaymentTeacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    tools:visibility="gone">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="130dp"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/item_shimmer_payment" />
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="130dp"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/item_shimmer_payment" />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/item_shimmer_payment" />
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="130dp"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/item_shimmer_payment" />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/item_shimmer_payment" />
 
-                </LinearLayout>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/item_shimmer_payment" />
 
-            </com.facebook.shimmer.ShimmerFrameLayout>
+                    </LinearLayout>
 
-        </RelativeLayout>
+                </com.facebook.shimmer.ShimmerFrameLayout>
 
-    </ScrollView>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <LinearLayout
         android:id="@+id/linearPaymentTeacherSummary"

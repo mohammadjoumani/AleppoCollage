@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.AdapterView
+import androidx.activity.OnBackPressedCallback
+import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
@@ -16,6 +18,7 @@ import com.example.aleppocollage.model.payment.domain.Payment
 import com.example.aleppocollage.ui.main.model.ProfileInfo
 import com.example.aleppocollage.ui.mark.student.adapter.YearSpinnerAdapter
 import com.example.aleppocollage.ui.payment.adapter.PaymentRecyclerAdapter
+import com.example.aleppocollage.ui.payment.student.PaymentStudentStateEvent
 import com.example.aleppocollage.ui.util.loading.LoadingViewModel
 import com.example.aleppocollage.ui.util.sharedviewmodel.SharedViewModel
 import com.example.aleppocollage.util.Common
@@ -30,7 +33,7 @@ class PaymentTeacherFragment : Fragment(R.layout.fragment_payment_teacher) {
 
     private var years: ArrayList<String> = ArrayList()
     private var payments: ArrayList<Payment> = ArrayList()
-    private var year = ""
+    private var year = -1
 
     private var paid = 0
 
@@ -55,6 +58,17 @@ class PaymentTeacherFragment : Fragment(R.layout.fragment_payment_teacher) {
 
         binding.apply {
 
+            swipeRefreshPaymentTeacher.setColorSchemeColors(ContextCompat.getColor(requireContext(), R.color.colorPrimary))
+
+            swipeRefreshPaymentTeacher.setOnRefreshListener {
+                observePaymentDataState()
+                viewModel.setPaymentStateEvent(
+                    PaymentTeacherStateEvent.Payment,
+                    teacherId = Common.getCurrentTeacher()!!.id,
+                    year = "$year-${year + 1}"
+                )
+            }
+
             cardPaymentTeacherBack.setOnClickListener {
                 findNavController().navigateUp()
             }
@@ -73,18 +87,28 @@ class PaymentTeacherFragment : Fragment(R.layout.fragment_payment_teacher) {
                     override fun onItemSelected(
                         adapterView: AdapterView<*>?, view: View?, position: Int, id: Long) {
 
-                        year = years[position] + "-" + "${years[position].toInt() + 1}"
+                        year = years[position].toInt()
 
                         observePaymentDataState()
                         viewModel.setPaymentStateEvent(
                             PaymentTeacherStateEvent.Payment,
                             teacherId = Common.getCurrentTeacher()!!.id,
-                            year = year
+                            year = "$year-${year + 1}"
                         )
 
                     }
                 }
         }
+
+        activity?.onBackPressedDispatcher?.addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                if (sharedViewModel.showProfileInfo.value!!.state) {
+                    sharedViewModel.showProfileInfo.value = ProfileInfo(userType = Common.getCurrentTypeUser(), teacher = Common.getCurrentTeacher()!!, state = false)
+                } else{
+                    findNavController().navigateUp()
+                }
+            }
+        })
 
     }
 
@@ -110,72 +134,88 @@ class PaymentTeacherFragment : Fragment(R.layout.fragment_payment_teacher) {
 
     private fun observePaymentDataState() {
         viewModel.paymentsDataState.observe(viewLifecycleOwner) {
-            when(it){
-                is DataState.Loading -> {
-                    binding.apply {
+            binding.apply {
+                when(it){
+                    is DataState.Loading -> {
                         shimmerAnimationPaymentTeacher.isVisible = true
+                        swipeRefreshPaymentTeacher.isRefreshing = true
                         recyclerPaymentTeacher.isVisible = false
                         imgPaymentNoData.isVisible = false
                         txtPaymentNoData.isVisible = false
                     }
-                }
-                is DataState.Success -> {
+                    is DataState.Success -> {
+                        payments = it.data as ArrayList<Payment>
+                        shimmerAnimationPaymentTeacher.isVisible = false
+                        swipeRefreshPaymentTeacher.isRefreshing = false
+                        if (payments.size != 0) {
+                                paymentRecyclerAdapter.setData(payments)
 
-                    payments = it.data as ArrayList<Payment>
+                                recyclerPaymentTeacher.isVisible = true
+                                imgPaymentNoData.isVisible = false
+                                txtPaymentNoData.isVisible = false
 
-                    if (payments.size != 0) {
+                                paid = 0
 
-                        paymentRecyclerAdapter.setData(payments)
+                                observeCostDataState()
+                                viewModel.setCostStateEvent(
+                                    PaymentTeacherStateEvent.Cost,
+                                    teacherId = Common.getCurrentTeacher()!!.id,
+                                    groupId = 0, year = "$year-${year + 1}"
+                                )
 
-                        binding.apply {
-                            recyclerPaymentTeacher.isVisible = true
-                            imgPaymentNoData.isVisible = false
-                            txtPaymentNoData.isVisible = false
-                        }
+                                for (i in 0 until payments.size) {
+                                    paid += payments[i].pay
+                                }
 
-                        paid = 0
+                            } else {
+                                imgPaymentNoData.isVisible = true
+                                txtPaymentNoData.isVisible = true
+                                txtPaymentTotalAmount.text = "0"
+                                txtPaymentPaidAmount.text = "0"
+                                txtPaymentRemainingAmount.text = "0"
+                            }
 
-                        observeCostDataState()
-                        viewModel.setCostStateEvent(
-                            PaymentTeacherStateEvent.Cost,
-                            teacherId = Common.getCurrentTeacher()!!.id,
-                            groupId = 0, year = year
-                        )
-
-                        for (i in 0 until payments.size) {
-                            paid += payments[i].pay
-                        }
-
-                    } else {
-                        binding.apply {
-                            imgPaymentNoData.isVisible = true
-                            txtPaymentNoData.isVisible = true
-                            txtPaymentTotalAmount.text = "0"
-                            txtPaymentPaidAmount.text = "0"
-                            txtPaymentRemainingAmount.text = "0"
-                        }
+                        viewModel.setPaymentStateEvent(PaymentTeacherStateEvent.NonePayment)
                     }
-
-                    viewModel.setPaymentStateEvent(PaymentTeacherStateEvent.NonePayment)
-
-                    binding.shimmerAnimationPaymentTeacher.isVisible = false
-                }
-                is DataState.Failure -> {
-
-                    binding.apply {
+                    is DataState.Failure -> {
                         imgPaymentNoData.isVisible = true
                         txtPaymentNoData.isVisible = true
                         shimmerAnimationPaymentTeacher.isVisible = false
+                        swipeRefreshPaymentTeacher.isRefreshing = false
                         recyclerPaymentTeacher.isVisible = false
                         txtPaymentTotalAmount.text = "0"
                         txtPaymentPaidAmount.text = "0"
                         txtPaymentRemainingAmount.text = "0"
-                    }
 
-                    viewModel.setPaymentStateEvent(PaymentTeacherStateEvent.NonePayment)
-                }
-                is DataState.ExceptionState -> {
-                    viewModel.setPaymentStateEvent(PaymentTeacherStateEvent.NonePayment)
+                        Common.showToast(requireActivity(), getString(R.string.strNotFoundData),"error")
+                        viewModel.setPaymentStateEvent(PaymentTeacherStateEvent.NonePayment)
+                    }
+                    is DataState.ExceptionState -> {
+                        imgPaymentNoData.isVisible = false
+                        txtPaymentNoData.isVisible = false
+                        shimmerAnimationPaymentTeacher.isVisible = false
+                        swipeRefreshPaymentTeacher.isRefreshing = false
+                        recyclerPaymentTeacher.isVisible = false
+                        txtPaymentTotalAmount.text = "0"
+                        txtPaymentPaidAmount.text = "0"
+                        txtPaymentRemainingAmount.text = "0"
+
+                        Common.showSnackBar(requireContext(), binding.root, getString(R.string.strThereIsProblem))
+                        viewModel.setPaymentStateEvent(PaymentTeacherStateEvent.NonePayment)
+                    }
+                    is DataState.Connection -> {
+                        imgPaymentNoData.isVisible = false
+                        txtPaymentNoData.isVisible = false
+                        shimmerAnimationPaymentTeacher.isVisible = false
+                        swipeRefreshPaymentTeacher.isRefreshing = false
+                        recyclerPaymentTeacher.isVisible = false
+                        txtPaymentTotalAmount.text = "0"
+                        txtPaymentPaidAmount.text = "0"
+                        txtPaymentRemainingAmount.text = "0"
+
+                        Common.showSnackBar(requireContext(), binding.root, getString(R.string.strThereIsProblem))
+                        viewModel.setPaymentStateEvent(PaymentTeacherStateEvent.NonePayment)
+                    }
                 }
             }
         }
@@ -183,25 +223,26 @@ class PaymentTeacherFragment : Fragment(R.layout.fragment_payment_teacher) {
 
     private fun observeCostDataState() {
         viewModel.costDataState.observe(viewLifecycleOwner) {
-            when(it) {
-                is DataState.Loading -> {
+            binding.apply {
+                when(it) {
+                    is DataState.Loading -> {
 
-                }
-                is DataState.Success -> {
-                    binding.apply {
+                    }
+                    is DataState.Success -> {
                         txtPaymentPaidAmount.text = paid.toString()
                         txtPaymentTotalAmount.text = it.data.toString()
                         txtPaymentRemainingAmount.text = it.data?.minus(paid).toString()
+
+                        viewModel.setCostStateEvent(PaymentTeacherStateEvent.NoneCost)
                     }
-                    viewModel.setCostStateEvent(PaymentTeacherStateEvent.NoneCost)
-                }
-                is DataState.Failure -> {
-                    viewModel.setCostStateEvent(PaymentTeacherStateEvent.NoneCost)
+                    is DataState.Failure -> {
+                        viewModel.setCostStateEvent(PaymentTeacherStateEvent.NoneCost)
 
-                }
-                is DataState.ExceptionState -> {
-                    viewModel.setCostStateEvent(PaymentTeacherStateEvent.NoneCost)
+                    }
+                    is DataState.ExceptionState -> {
+                        viewModel.setCostStateEvent(PaymentTeacherStateEvent.NoneCost)
 
+                    }
                 }
             }
         }

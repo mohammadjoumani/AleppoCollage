@@ -3,6 +3,7 @@ package com.example.aleppocollage.ui.notification
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
+import androidx.activity.OnBackPressedCallback
 import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.getColor
 import androidx.core.view.isVisible
@@ -70,9 +71,15 @@ class NotificationFragment : Fragment(R.layout.fragment_notification) {
         binding.apply {
 
             cardNotificationProfile.setOnClickListener {
-
                 val state = !(sharedViewModel.showProfileInfo.value!!.state)
-                sharedViewModel.showProfileInfo.value = ProfileInfo(userType = Common.getCurrentTypeUser(),Common.getCurrentStudent()!!, state = state)
+                when(Common.getCurrentTypeUser()) {
+                    "Student" -> {
+                        sharedViewModel.showProfileInfo.value = ProfileInfo(userType = Common.getCurrentTypeUser(), student = Common.getCurrentStudent()!!, state = state)
+                    }
+                    "Teacher" -> {
+                        sharedViewModel.showProfileInfo.value = ProfileInfo(userType = Common.getCurrentTypeUser(), teacher = Common.getCurrentTeacher()!!, state = state)
+                    }
+                }
 
             }
 
@@ -96,6 +103,24 @@ class NotificationFragment : Fragment(R.layout.fragment_notification) {
                 findNavController().navigateUp()
             }
         }
+
+        activity?.onBackPressedDispatcher?.addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                if (sharedViewModel.showProfileInfo.value!!.state) {
+                    when(Common.getCurrentTypeUser()){
+                        "Student" -> {
+                            sharedViewModel.showProfileInfo.value = ProfileInfo(userType = Common.getCurrentTypeUser(), student = Common.getCurrentStudent()!!, state = false)
+                        }
+
+                        "Teacher" -> {
+                            sharedViewModel.showProfileInfo.value = ProfileInfo(userType = Common.getCurrentTypeUser(), teacher = Common.getCurrentTeacher()!!, state = false)
+                        }
+                    }
+                } else{
+                    findNavController().navigateUp()
+                }
+            }
+        })
 
     }
 
@@ -144,6 +169,9 @@ class NotificationFragment : Fragment(R.layout.fragment_notification) {
                     viewModel.setStateEvent(NotificationStateEvent.None)
                 }
                 is DataState.Failure -> {
+                    binding.apply {
+
+                    }
                     Common.showSnackBar(requireContext(), binding.root, it.message)
                     viewModel.setStateEvent(NotificationStateEvent.None)
 
@@ -151,6 +179,9 @@ class NotificationFragment : Fragment(R.layout.fragment_notification) {
                 is DataState.ExceptionState -> {
                     Common.showSnackBar(requireContext(), binding.root, "${it}")
                     viewModel.setStateEvent(NotificationStateEvent.None)
+
+                }
+                is DataState.Connection -> {
 
                 }
             }

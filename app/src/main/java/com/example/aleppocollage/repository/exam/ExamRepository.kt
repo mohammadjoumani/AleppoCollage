@@ -28,6 +28,7 @@ class ExamRepository @Inject constructor(
                 var response = false
                 val connection: Connection? = connectDB.getConnection()
                 if (connection == null) {
+                    emit(DataState.Connection)
                 } else {
                     val query = "Call AndroidSubjectExamsSelect(?,?)"
                     val stmt: CallableStatement = connection.prepareCall(query)

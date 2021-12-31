@@ -25,6 +25,7 @@ class PaymentRepository @Inject constructor(
             var response = false
             val connection: Connection? = connectDB.getConnection()
             if (connection == null) {
+                emit(DataState.Connection)
             } else {
                 val query = "Call AndroidStudentPayments(?,?)"
                 val stmt: CallableStatement = connection.prepareCall(query)
@@ -67,6 +68,7 @@ class PaymentRepository @Inject constructor(
             var response = false
             val connection: Connection? = connectDB.getConnection()
             if (connection == null) {
+                emit(DataState.Connection)
             } else {
                 val query = "Call AndroidTeacherPayments(?,?)"
                 val stmt: CallableStatement = connection.prepareCall(query)
@@ -107,6 +109,7 @@ class PaymentRepository @Inject constructor(
             var response = false
             val connection: Connection? = connectDB.getConnection()
             if (connection == null) {
+                emit(DataState.Connection)
             } else {
                 val query = "Call AndroidStudentCost(?,?)"
                 val stmt: CallableStatement = connection.prepareCall(query)
@@ -138,6 +141,7 @@ class PaymentRepository @Inject constructor(
             var response = false
             val connection: Connection? = connectDB.getConnection()
             if (connection == null) {
+                DataState.Connection
             } else {
                 val query = "Call AndroidTeacherCost(?,?,?)"
                 val stmt: CallableStatement = connection.prepareCall(query)

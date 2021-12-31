@@ -2,7 +2,6 @@ package com.example.aleppocollage.ui.util.sharedviewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.aleppocollage.ui.attendance.teacher.model.StateAttendance
 import com.example.aleppocollage.ui.main.model.ProfileInfo
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -19,8 +18,8 @@ class SharedViewModel @Inject constructor() : ViewModel() {
     var stateLoading = MutableLiveData<Boolean>()
     var textLoading = MutableLiveData<String>()
 
-    var stateAttendance = MutableLiveData<StateAttendance>()
-
     var stateStartApp = MutableLiveData(0)
+
+    var markValue = MutableLiveData(0)
 
 }

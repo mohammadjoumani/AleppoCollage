@@ -1,5 +1,6 @@
 package com.example.aleppocollage.repository.attendance
 
+import android.util.Log
 import com.example.aleppocollage.connecter.ConnectDB
 import com.example.aleppocollage.model.attendance.domain.Attendance
 import com.example.aleppocollage.util.DataState
@@ -25,6 +26,7 @@ class AttendanceRepository @Inject constructor(
                 var response = false
                 val connection: Connection? = connectDB.getConnection()
                 if (connection == null) {
+                    emit(DataState.Connection)
                 } else {
                     val query = "Call AndroidStudentAttendenceSelect(?,?)"
                     val stmt: CallableStatement = connection.prepareCall(query)
@@ -115,6 +117,7 @@ class AttendanceRepository @Inject constructor(
                 var response = false
                 val connection: Connection? = connectDB.getConnection()
                 if (connection == null) {
+                    emit(DataState.Connection)
                 } else {
                     val query = "Call AndroidGroupAttendenceSelect(?,?)"
                     val stmt: CallableStatement = connection.prepareCall(query)
@@ -194,21 +197,21 @@ class AttendanceRepository @Inject constructor(
         }.flowOn(Dispatchers.IO)
 
 
-    suspend fun setAttendanceStudent(attendances: List<Attendance>): Flow<DataState<String>> =
+    suspend fun setAttendanceStudent(attendances: List<Attendance>, date: String): Flow<DataState<String>> =
         flow {
             emit(DataState.Loading)
             try {
                 var response = false
                 val connection: Connection? = connectDB.getConnection()
                 if (connection == null) {
+                    emit(DataState.Connection)
                 } else {
-
                     for (attendance in attendances) {
                         val query = "Call AndroidStudentAttendence(?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
                         val stmt: CallableStatement = connection.prepareCall(query)
                         stmt.setInt("@ID", attendance.id)
                         stmt.setInt("@StudentID", attendance.studentID)
-                        stmt.setString("@Date", attendance.date)
+                        stmt.setString("@Date", date)
                         stmt.setString("@Note", attendance.note)
                         stmt.setString("@Session0", attendance.session0)
                         stmt.setString("@Session1", attendance.session1)

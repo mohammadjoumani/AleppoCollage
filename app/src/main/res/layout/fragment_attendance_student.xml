@@ -131,6 +131,7 @@
                             android:paddingEnd="@dimen/dmPaddingEndCardView">
 
                             <ImageView
+                                android:id="@+id/imgAttendanceStudentIconDate"
                                 android:layout_width="@dimen/dmSizeImageIconAttendanceStudentDate"
                                 android:layout_height="@dimen/dmSizeImageIconAttendanceStudentDate"
                                 android:layout_centerVertical="true"
@@ -140,11 +141,11 @@
                             <ImageButton
                                 android:id="@+id/imgAttendanceStudentClearDate"
                                 android:layout_width="20dp"
-                                android:visibility="gone"
-                                android:layout_marginStart="8dp"
+                                android:visibility="visible"
+                                android:layout_marginEnd="8dp"
                                 android:layout_height="20dp"
                                 android:layout_centerVertical="true"
-                                android:layout_toEndOf="@+id/txtAttendanceStudentChooseDate"
+                                android:layout_toStartOf="@+id/imgAttendanceStudentIconDate"
                                 android:background="@drawable/ic_clear"/>
 
                             <TextView
@@ -153,7 +154,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_centerVertical="true"
                                 android:fontFamily="@font/cairo_regular"
-                                android:text="@string/strEnterDateToday"
+                                android:text="@string/strChooseDate"
                                 android:textColor="#AAAAAA"
                                 android:textSize="@dimen/dmTextSizeAttendanceStudentCardView" />
 
@@ -707,34 +708,6 @@
                     </RelativeLayout>
 
                 </androidx.cardview.widget.CardView>
-
-                <LinearLayout
-                    android:id="@+id/linearAttendanceNoData"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:visibility="gone"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
-
-                    <ImageView
-                        android:layout_width="250dp"
-                        android:layout_height="250dp"
-                        android:src="@drawable/ic_no_data" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:fontFamily="@font/cairo_regular"
-                        android:text="لا توجد معلومات"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="22sp" />
-
-                </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

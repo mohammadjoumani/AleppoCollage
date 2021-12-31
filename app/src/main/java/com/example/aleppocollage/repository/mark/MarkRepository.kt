@@ -1,7 +1,9 @@
 package com.example.aleppocollage.repository.mark
 
 import com.example.aleppocollage.connecter.ConnectDB
+import com.example.aleppocollage.model.groupstudent.domain.GroupStudent
 import com.example.aleppocollage.model.mark.domain.Mark
+import com.example.aleppocollage.ui.mark.teacher.MarkTeacherStateEvent
 import com.example.aleppocollage.util.DataState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -25,6 +27,7 @@ class MarkRepository @Inject constructor(
             var response = false
             val connection: Connection? = connectDB.getConnection()
             if (connection == null) {
+                emit(DataState.Connection)
             } else {
                 val query = "Call AndroidStudentsExamsMarks(?,?,?,?)"
                 val stmt: CallableStatement = connection.prepareCall(query)
@@ -65,24 +68,25 @@ class MarkRepository @Inject constructor(
         }
     }.flowOn(Dispatchers.IO)
 
-    suspend fun UpdateMark(id: Int, maxMark: Int, description: String): Flow<DataState<Unit>> = flow {
+    suspend fun updateMark(groupStudents: List<GroupStudent>): Flow<DataState<String>> = flow {
         emit(DataState.Loading)
         try {
             var response = false
             val connection: Connection? = connectDB.getConnection()
             if (connection == null) {
+                emit(DataState.Connection)
             } else {
-                val query = "Call AndroidMaxMarkUpdate(?,?,?)"
-                val stmt: CallableStatement = connection.prepareCall(query)
-                stmt.setInt("@ID", id)
-                stmt.setInt("@MaxMark", maxMark)
-                stmt.setString("@Description", description)
-
-                stmt.executeUpdate()
+                for (groupStudent in groupStudents){
+                    val query = "Call AndroidMarkUpdate(?,?)"
+                    val stmt: CallableStatement = connection.prepareCall(query)
+                    stmt.setInt("@ID", groupStudent.id)
+                    stmt.setInt("@Grade", groupStudent.grade)
+                    stmt.executeUpdate()
+                }
                 response = true
 
                 if (response){
-                    emit(DataState.Success(Unit))
+                    emit(DataState.Success("تمت العلمية بنجاح"))
                 } else if (!response) {
                     emit(DataState.Failure(""))
                 }
@@ -94,12 +98,13 @@ class MarkRepository @Inject constructor(
         }
     }.flowOn(Dispatchers.IO)
 
-    suspend fun UpdateMaxMark(id: Int, maxMark: Int, description: String): Flow<DataState<Unit>> = flow {
+    suspend fun updateMaxMark(id: Int, maxMark: Int, description: String): Flow<DataState<Unit>> = flow {
         emit(DataState.Loading)
         try {
             var response = false
             val connection: Connection? = connectDB.getConnection()
             if (connection == null) {
+                emit(DataState.Connection)
             } else {
                 val query = "Call AndroidMaxMarkUpdate(?,?,?)"
                 val stmt: CallableStatement = connection.prepareCall(query)

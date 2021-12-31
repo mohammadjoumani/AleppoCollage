@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
-    android:clipToPadding="false"
     tools:context=".ui.home.student.HomeStudentFragment">
 
     <ScrollView
@@ -19,6 +18,7 @@
             android:layout_height="match_parent">
 
             <ImageView
+                android:visibility="visible"
                 android:id="@+id/imgHomeStudentBackGround"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -117,6 +117,28 @@
 
             </RelativeLayout>
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relativeHomeStudentAppBar">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:layout_width="175dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_height="175dp"
+                        android:id="@+id/pieChartHomeStudentAttendance"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
@@ -140,9 +162,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <RelativeLayout
-            android:id="@+id/relativeHomeStudentPayment"
+        <LinearLayout
+            android:id="@+id/linearHomeStudentPayment"
             android:layout_width="0dp"
+            android:orientation="vertical"
+            android:gravity="center"
             android:layout_height="match_parent"
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
@@ -157,11 +181,20 @@
                 android:layout_centerInParent="true"
                 android:background="@drawable/ic_credit_card" />
 
-        </RelativeLayout>
+            <TextView
+                android:fontFamily="@font/cairo_regular"
+                android:textColor="@color/colorGray"
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strPayment"/>
+        </LinearLayout>
 
-        <RelativeLayout
-            android:id="@+id/relativeHomeStudentMarks"
+        <LinearLayout
+            android:id="@+id/linearHomeStudentMarks"
             android:layout_width="0dp"
+            android:orientation="vertical"
+            android:gravity="center"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
@@ -176,13 +209,22 @@
                 android:layout_centerInParent="true"
                 android:background="@drawable/ic_mark" />
 
-        </RelativeLayout>
+            <TextView
+                android:fontFamily="@font/cairo_regular"
+                android:textColor="@color/colorGray"
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strMark"/>
+        </LinearLayout>
 
-        <RelativeLayout
-            android:id="@+id/relativeHomeStudentAttendance"
+        <LinearLayout
+            android:id="@+id/linearHomeStudentAttendance"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
+            android:orientation="vertical"
+            android:gravity="center"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="5dp"
@@ -195,7 +237,15 @@
                 android:layout_centerInParent="true"
                 android:background="@drawable/ic_calendar" />
 
-        </RelativeLayout>
+            <TextView
+                android:fontFamily="@font/cairo_regular"
+                android:textColor="@color/colorGray"
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strAbsence"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 

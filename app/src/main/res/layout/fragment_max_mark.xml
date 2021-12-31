@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ui.mark.maxmark.MaxMarkFragment">
+
+    <RelativeLayout
+        android:id="@+id/relativeMaxMarkBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardMaxMarkProfile"
+            android:layout_width="@dimen/dmSizeCardButtonAppBar"
+            android:layout_height="@dimen/dmSizeCardButtonAppBar"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/dmMarginTop"
+            android:layout_marginEnd="@dimen/dmMarginEnd"
+            android:layout_marginBottom="5dp"
+            android:clickable="true"
+            android:elevation="@dimen/dmElevationButton"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="@dimen/dmRadiusCardViewAppBar">
+
+            <ImageView
+                android:layout_width="@dimen/dmSizeIconImageAppBar"
+                android:layout_height="@dimen/dmSizeIconImageAppBar"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_profile" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardMaxMarkBack"
+            android:layout_width="@dimen/dmSizeCardButtonAppBar"
+            android:layout_height="@dimen/dmSizeCardButtonAppBar"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dmMarginStart"
+            android:layout_marginTop="@dimen/dmMarginTop"
+            android:layout_marginBottom="5dp"
+            android:clickable="true"
+            android:elevation="16dp"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="@dimen/dmRadiusCardViewAppBar">
+
+            <ImageView
+                android:layout_width="@dimen/dmSizeIconBackAppBar"
+                android:layout_height="@dimen/dmSizeIconBackAppBar"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_back_ward" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dmMarginStart"
+            android:layout_toEndOf="@+id/cardMaxMarkBack"
+            android:fontFamily="@font/cairo_black"
+            android:text="@string/strNewExam"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/dmTextSizeTitleTextView" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeMaxMarkBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edtMaxMarkValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dmMarginStart"
+                android:layout_marginTop="@dimen/dmHalfMarginTop"
+                android:layout_marginEnd="@dimen/dmMarginEnd"
+                android:layout_marginBottom="@dimen/dmHalfMarginBottom"
+                android:background="@drawable/bg_edit_text_border"
+                android:drawableEnd="@drawable/ic_edit"
+                android:elevation="@dimen/dmElevationRegisterStudentEditText"
+                android:fontFamily="@font/cairo_regular"
+                android:hint="@string/strEnterTopMark"
+                android:inputType="number"
+                android:paddingStart="@dimen/dmPaddingStartRegisterStudentEditText"
+                android:paddingEnd="@dimen/dmPaddingEndRegisterStudentEditText" />
+
+            <EditText
+                android:id="@+id/edtMaxMarkDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtMaxMarkValue"
+                android:layout_marginStart="@dimen/dmMarginStart"
+                android:layout_marginTop="@dimen/dmHalfMarginTop"
+                android:layout_marginEnd="@dimen/dmMarginEnd"
+                android:layout_marginBottom="@dimen/dmHalfMarginBottom"
+                android:background="@drawable/bg_edit_text_border"
+                android:drawableEnd="@drawable/ic_edit"
+                android:elevation="@dimen/dmElevationRegisterStudentEditText"
+                android:fontFamily="@font/cairo_regular"
+                android:hint="@string/strDescription"
+                android:inputType="text"
+                android:paddingStart="@dimen/dmPaddingStartRegisterStudentEditText"
+                android:paddingEnd="@dimen/dmPaddingEndRegisterStudentEditText" />
+
+            <Button
+                android:id="@+id/btnMaxMarkSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtMaxMarkDescription"
+                android:layout_marginStart="@dimen/dmMarginStart"
+                android:layout_marginTop="@dimen/dmHalfMarginTop"
+                android:layout_marginEnd="@dimen/dmMarginEnd"
+                android:background="@drawable/bg_button_sign_in_purple"
+                android:elevation="@dimen/dmElevationButton"
+                android:fontFamily="@font/cairo_bold"
+                android:text="@string/strEnterMark"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/dmTextSizeButton" />
+
+            <ImageView
+                android:id="@+id/imgMaxMark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_aplus" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

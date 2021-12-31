@@ -27,7 +27,6 @@
         android:id="@+id/datepiker"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        app:fontFamily="@font/cairo_bold"
         app:picker_curved="false"
         app:picker_cyclic="true"
         app:picker_displayDays="false"

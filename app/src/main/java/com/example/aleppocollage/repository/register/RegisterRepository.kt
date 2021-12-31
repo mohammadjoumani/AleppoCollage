@@ -23,6 +23,7 @@ class RegisterRepository @Inject constructor(
             var response = false
             val connection: Connection? = connectDB.getConnection()
             if (connection == null) {
+                emit(DataState.Connection)
             } else {
                 val query = "Call AndroidOneStudentSelect(?,?)"
                 val stmt: CallableStatement = connection.prepareCall(query)
@@ -69,6 +70,7 @@ class RegisterRepository @Inject constructor(
                 var response = false
                 val connection: Connection? = connectDB.getConnection()
                 if (connection == null) {
+                    emit(DataState.Connection)
                 } else {
                     val query = "Call AndroidTeachersSelect"
                     val stmt: CallableStatement = connection.prepareCall(query)

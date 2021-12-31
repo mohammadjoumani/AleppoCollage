@@ -138,9 +138,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <RelativeLayout
-            android:id="@+id/relativeHomeTeacherPayment"
+        <LinearLayout
+            android:id="@+id/linearHomeTeacherPayment"
             android:layout_width="0dp"
+            android:orientation="vertical"
+            android:gravity="center"
             android:layout_height="match_parent"
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
@@ -155,11 +157,21 @@
                 android:layout_centerInParent="true"
                 android:background="@drawable/ic_credit_card" />
 
-        </RelativeLayout>
+            <TextView
+                android:fontFamily="@font/cairo_regular"
+                android:textColor="@color/colorGray"
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strPayment"/>
 
-        <RelativeLayout
-            android:id="@+id/relativeHomeTeacherTest"
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearHomeTeacherTest"
             android:layout_width="0dp"
+            android:orientation="vertical"
+            android:gravity="center"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
@@ -174,11 +186,21 @@
                 android:layout_centerInParent="true"
                 android:background="@drawable/ic_test" />
 
-        </RelativeLayout>
+            <TextView
+                android:fontFamily="@font/cairo_regular"
+                android:textColor="@color/colorGray"
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strTest"/>
 
-        <RelativeLayout
-            android:id="@+id/relativeHomeTeacherAttendance"
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearHomeTeacherAttendance"
             android:layout_width="0dp"
+            android:orientation="vertical"
+            android:gravity="center"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
@@ -193,7 +215,15 @@
                 android:layout_centerInParent="true"
                 android:background="@drawable/ic_calendar" />
 
-        </RelativeLayout>
+            <TextView
+                android:fontFamily="@font/cairo_regular"
+                android:textColor="@color/colorGray"
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strAbsence"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 

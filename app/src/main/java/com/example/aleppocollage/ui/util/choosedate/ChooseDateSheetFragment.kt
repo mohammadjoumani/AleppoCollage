@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
@@ -48,16 +49,14 @@ class ChooseDateSheetFragment : BottomSheetDialogFragment() {
 
         binding.apply {
 
+            datepiker.setTypeface(ResourcesCompat.getFont(requireContext(), R.font.cairo_regular))
 //            31-12-2021
             btnChoseDate.setOnClickListener {
-
                 findNavController().navigateUp()
 
                 val month = (datepiker.date.month + 1)
                 val day = (datepiker.date.date)
                 val year = datepiker.date.year + 1900
-
-                Log.d("datepiker", "$day-$month-$year")
 
                 sharedViewModel.date.value = "$day-$month-$year"
             }

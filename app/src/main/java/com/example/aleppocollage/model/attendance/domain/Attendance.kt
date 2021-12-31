@@ -18,5 +18,5 @@ data class Attendance(
     var session6: String?,
     var session7: String?,
     var session8: String?,
-    var session9: String?
+    var session9: String?,
 )

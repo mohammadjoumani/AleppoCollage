@@ -14,7 +14,7 @@
                         <option name="myPosition">
                           <Point>
                             <option name="x" value="-564" />
-                            <option name="y" value="-891" />
+                            <option name="y" value="-808" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -35,6 +35,11 @@
                               </value>
                             </entry>
                             <entry key="actionHomeTeacherFragmentToTestFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_HomeTeacherFragment_to_RegisterFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -130,17 +135,8 @@
                         <option name="myPosition">
                           <Point>
                             <option name="x" value="-565" />
-                            <option name="y" value="-418" />
+                            <option name="y" value="-470" />
                           </Point>
-                        </option>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_absenceTeacherFragment_to_setAttendanceTeacherFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -151,6 +147,11 @@
                     </value>
                   </entry>
                   <entry key="action_global_connectionStateDialog">
+                    <value>
+                      <LayoutPositions />
+                    </value>
+                  </entry>
+                  <entry key="action_global_enterMark">
                     <value>
                       <LayoutPositions />
                     </value>
@@ -184,25 +185,13 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="examCheckedFragment">
+                  <entry key="enterMarkSheetFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-732" />
-                            <option name="y" value="-73" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="examDeliveredFragment">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="-728" />
-                            <option name="y" value="512" />
+                            <option name="x" value="-1434" />
+                            <option name="y" value="-1117" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -213,23 +202,18 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="12" />
+                            <option name="x" value="-1175" />
+                            <option name="y" value="-474" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_examFragment_to_examCheckedFragment">
+                            <entry key="action_examFragment_to_mark_teacherFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
                             </entry>
-                            <entry key="action_examFragment_to_examDeliveredFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="action_examFragment_to_examNewFragment">
+                            <entry key="action_examFragment_to_maxMarkFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -239,29 +223,22 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="examNewFragment">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="-728" />
-                            <option name="y" value="201" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
                   <entry key="homeStudentFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-73" />
-                            <option name="y" value="-878" />
+                            <option name="x" value="-24" />
+                            <option name="y" value="-819" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_homeStudentFragment_to_RegisterFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_homeStudentFragment_to_absenceStudentFragment">
                               <value>
                                 <LayoutPositions />
@@ -311,6 +288,30 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="markTeacherFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-1069" />
+                            <option name="y" value="21" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="maxMarkFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-1344" />
+                            <option name="y" value="24" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="notificationFragment">
                     <value>
                       <LayoutPositions>
@@ -342,18 +343,6 @@
                           <Point>
                             <option name="x" value="290" />
                             <option name="y" value="-405" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="setAttendanceTeacherFragment">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="-559" />
-                            <option name="y" value="-68" />
                           </Point>
                         </option>
                       </LayoutPositions>

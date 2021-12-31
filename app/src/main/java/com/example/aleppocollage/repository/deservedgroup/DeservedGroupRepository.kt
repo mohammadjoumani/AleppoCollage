@@ -27,6 +27,7 @@ class DeservedGroupRepository @Inject constructor(
                 var response = false
                 val connection: Connection? = connectDB.getConnection()
                 if (connection == null) {
+                    emit(DataState.Connection)
                 } else {
                     val query = "Call AndroidTeacherDeservedGroupsSelect(?,?)"
                     val stmt: CallableStatement = connection.prepareCall(query)
@@ -78,6 +79,7 @@ class DeservedGroupRepository @Inject constructor(
                 var response = false
                 val connection: Connection? = connectDB.getConnection()
                 if (connection == null) {
+                    emit(DataState.Connection)
                 } else {
                     val query = "Call AndroidGroupStudentsSelect(?,?)"
                     val stmt: CallableStatement = connection.prepareCall(query)

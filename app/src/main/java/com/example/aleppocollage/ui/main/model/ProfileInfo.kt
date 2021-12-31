@@ -7,5 +7,5 @@ class ProfileInfo(
     val userType: String,
     val student: Student? = null,
     val teacher: Teacher? = null,
-    val state: Boolean,
+    var state: Boolean,
 )
